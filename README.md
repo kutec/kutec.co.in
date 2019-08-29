@@ -1,3 +1,11 @@
+## Changelogs
+
+### Aug 30 2019
+1. First commit
+2. Removed unwanted branding
+3. Fixed issue with feed-plugin by changeing version to fix one
+4. Trying to fix JS heap memory issue
+
 # kutec.co.in 
 A [Gatsby v2](https://www.gatsbyjs.org/) and [Netlify CMS](https://www.netlifycms.org) powered generic business website.
 
