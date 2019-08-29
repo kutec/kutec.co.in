@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: About Us
-meta_title: About Us | Gatsby Starter Business
+meta_title: About Us | Kushal Jayswal
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
