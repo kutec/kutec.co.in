@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4605786d-0f56-4206-9259-05270237175f/deploy-status)](https://app.netlify.com/sites/kutec/deploys)
+
 ## Changelogs
 
 ### Aug 30 2019
