@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Kushal Jayswal', // Site title.
-  siteTitleAlt: 'Fronend Developer', // Alternative site title for SEO.
-  siteLogo: '/icons/icon-512x512.png', // Logo used for SEO and manifest.
+  siteTitleAlt: 'KU', // Alternative site title for SEO.
+  siteLogo: 'https://en.gravatar.com/userimage/11516795/a2b65eab1a444284c8c88a3f97838eb9.jpg?size=64', // Logo used for SEO and manifest.
   siteUrl: 'https://kutec.netlify.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/kutec.co.in /.
   siteDescription: 'Kushal Jayswal, a professional frontend developer from India.', // Website description used for RSS feeds/meta description tag.
