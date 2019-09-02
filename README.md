@@ -2,11 +2,16 @@
 
 ## Changelogs
 
+### Sep 02 2019
+1. Updated Index page
+2. Update Gatsby CLI verssion
+3. Added React component for Github follow button
+
 ### Aug 30 2019
 1. First commit
 2. Removed unwanted branding
 3. Fixed issue with feed-plugin by changeing version to fix one
-4. Trying to fix JS heap memory issue
+4. Fix JS heap memory issue on server. Still in local facing same issue
 
 # kutec.co.in 
 A [Gatsby v2](https://www.gatsbyjs.org/) and [Netlify CMS](https://www.netlifycms.org) powered generic business website.
