@@ -1,5 +1,5 @@
 ---
-templateKey: 'home-page'
+templateKey: home-page
 title: Kushal Jayswal
 meta_title: Kushal Jayswal | Frontend Developer from India
 meta_description: >-
