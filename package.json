@@ -2,7 +2,7 @@
     "name": "kutec.co.in",
     "description": "Frontend Developer",
     "author": "Kushal Jayswal",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "license": "MIT",
     "scripts": {
         "develop": "gatsby develop",
@@ -17,6 +17,7 @@
         "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.2.1",
         "bulma": "^0.7.2",
         "gatsby": "^2.14.6",
+        "gatsby-cli": "^2.7.42",
         "gatsby-paginate": "^1.0.17",
         "gatsby-plugin-feed": "2.3.6",
         "gatsby-plugin-google-tagmanager": "^2.0.8",
@@ -42,6 +43,7 @@
         "react": "^16.7.0",
         "react-disqus-comments": "^1.4.0",
         "react-dom": "^16.7.0",
+        "react-github-btn": "^1.0.6",
         "react-helmet": "^5.2.0",
         "react-share": "^2.4.0",
         "uglifyjs-webpack-plugin": "^2.1.1"
