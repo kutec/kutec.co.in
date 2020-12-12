@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: */admin/
-Disallow: */tags/
-
-sitemap: https://kutec.netlify.com/sitemap.xml
