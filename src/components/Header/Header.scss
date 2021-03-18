@@ -1,0 +1,14 @@
+/* .header{
+  box-shadow: 0 0 100rem 0;
+  margin-bottom: 3rem;
+} */
+img.is-rounded{
+  max-height: 256px;
+  width: auto;
+}
+.is-gray{
+  filter: brightness(0);
+}
+.is-gray:hover{
+  filter: brightness(1);
+}
