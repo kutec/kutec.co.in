@@ -1,5 +1,3 @@
-
-
 ---
 title: "Angular - How to render HTML array items without a loop"
 cover: ""
