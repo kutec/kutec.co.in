@@ -8,7 +8,8 @@ category: "angular"
 slug: "angular-render-array-items-without-for-loop"
 tags:
     - javascript-join
-    - angular-
+    - angular-innerhtml
+    - 
 ---
 
 It is easy to render HTML output with array of strings.
@@ -24,5 +25,5 @@ JSON
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTEzMjU0OTldfQ==
+eyJoaXN0b3J5IjpbMTc4NTA0NTM3N119
 -->
