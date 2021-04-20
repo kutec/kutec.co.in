@@ -7,7 +7,8 @@ date: "2021-04-20"
 category: "angular"
 slug: "angular-render-array-items-without-for-loop"
 tags:
-    - stackedit-test
+    - javascript-join
+    - angular-
 ---
 
 It is easy to render HTML output with array of strings.
@@ -23,5 +24,5 @@ JSON
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MTUyMzI5Nl19
+eyJoaXN0b3J5IjpbLTEyMTEzMjU0OTldfQ==
 -->
