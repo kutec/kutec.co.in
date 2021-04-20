@@ -5,6 +5,7 @@ title: "Angular - How to render HTML array items without a loop"
 cover: ""
 date: "2021-04-20"
 category: "angular"
+slug: "angular-render-array"
 tags:
     - stackedit-test
 ---
@@ -22,5 +23,5 @@ JSON
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODMwODkyOV19
+eyJoaXN0b3J5IjpbLTQzMjIzMzA1OV19
 -->
