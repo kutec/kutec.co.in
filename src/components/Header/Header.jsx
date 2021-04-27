@@ -1,11 +1,5 @@
 import React from "react";
-import "./Header.scss";
 import Navigation from "../Navigation/Navigation";
-import Nav from 'react-bootstrap/Nav';
-
-import Navbar from 'react-bootstrap/Navbar';
-
-
 
 function Header({ config }) {
   const logo = config.siteLogo;
@@ -15,24 +9,34 @@ function Header({ config }) {
     return null;
   }
   return (
-    <header className="header mt-4 mb-5">
-      <div className="container">
-        <Navbar bg="" variant="light" className="p-0">
-          <Navbar.Brand href="/" id="1" className="is-gray">
-            {/* <img src={logo} className="d-inline-block align-middle" /> */}
-            <figure className="image d-inline-block align-middle mb-0">
-              <img className="rounded-circle img-fluid" src={logo} />
-            </figure>
-            <strong> {title}</strong>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Navigation config={config} labeled />
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+    <header className="header pl-4 pr-4 pt-2 pb-2">
+      <nav className="navbar navbar-expand-lg navbar-light p-0">
+        <a className="navbar-brand is-gray" href="/">
+          <figure className="image d-inline-block align-middle mb-0">
+            <img className="rounded-circle img-fluid" src={logo} />
+          </figure>
+          <strong> {title}</strong>
+        </a>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#basic-navbar-nav"
+          aria-controls="basic-navbar-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="basic-navbar-nav">
+          <ul className="navbar-nav ml-auto">
+            <Navigation config={config} labeled />
+          </ul>
+        </div>
+      </nav>
+      <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </header>
   );
 }
