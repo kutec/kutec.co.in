@@ -1,11 +1,50 @@
-/* =bootstrap */
-@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+/* =externam-libs */
+@import './lib';
+@import './rwd';
 
 /* = */
-body{
-    // background-color: grey;
+body {
+    background-color: #f3f1ee;
 }
 
-.section{
-    margin: 3rem 0;
+.ku-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
 }
+
+.section {
+    margin: 3rem 0;
+
+    &.fh {
+        min-height: calc(100vh - 190px);
+        height: 100%;
+    }
+}
+
+.home-hero {
+    // background: #ddd;
+}
+
+.header {
+    background: #fff;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+}
+
+/* utility */
+img.is-rounded {
+    max-height: 256px;
+    width: auto;
+}
+
+.is-gray {
+    filter: brightness(0);
+}
+
+.is-gray:hover {
+    filter: brightness(1);
+}
+
+
+
+
+   

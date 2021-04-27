@@ -26,6 +26,7 @@
         "format:styles": "prettier '**/*.{css,scss}' --write"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3",
         "@fortawesome/fontawesome-svg-core": "^1.2.34",
         "@fortawesome/free-brands-svg-icons": "^5.15.2",
         "@fortawesome/free-regular-svg-icons": "^5.15.2",
@@ -56,6 +57,7 @@
         "gatsby-source-filesystem": "^2.5.0",
         "gatsby-transformer-remark": "^2.10.0",
         "gatsby-transformer-sharp": "^2.6.0",
+        "install": "^0.13.0",
         "lodash": "^4.17.20",
         "moment": "^2.29.1",
         "netlify-cms-app": "^2.13.3",
@@ -67,6 +69,7 @@
         "react-helmet": "^6.1.0",
         "react-share": "^4.3.1",
         "react-twitter-widgets": "^1.9.5",
+        "rfs": "^9.0.3",
         "url-join": "^4.0.0"
     },
     "devDependencies": {

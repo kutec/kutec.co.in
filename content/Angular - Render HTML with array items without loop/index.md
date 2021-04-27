@@ -1,5 +1,5 @@
 ---
-title: "Angular - How to render HTML array items without a loop"
+title: "Angular - How to render HTML without array items without a loop"
 cover: ""
 date: "2021-04-20"
 category: "angular"

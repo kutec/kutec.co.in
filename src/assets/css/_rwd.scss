@@ -1,0 +1,39 @@
+/* =rwd */
+h1 {
+    @include font-size(2rem);
+}
+
+h2 {
+    @include font-size(1.4rem);
+    // font-size: calc(2vw + 1.4vh + .4vmin);
+}
+
+// Small devices (landscape phones, 576px and up)
+/* @media (min-width: 576px) {
+    h1 {
+        font-size: calc(1.5vw + 1.5vh + .5vmin);
+    }
+} */
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//     h1 {
+//         font-size: calc(1.5vw + 1.5vh + .5vmin);
+//     }
+// }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//     h1 {
+//         font-size: calc(1.5vw + 1.5vh + .5vmin);
+//     }
+// }

@@ -1,0 +1,4 @@
+{
+    "diffEditor.wordWrap": "on",
+    "html.format.wrapAttributes": "force-aligned"
+}
