@@ -1,24 +1,24 @@
 const config = {
-  siteTitle: "Kushal J.", // Site title.
+  siteTitle: "Kushal J", // Site title.
   siteTitleShort: "KU", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "Kushal J. - Frontend Developer from India", // Alternative site title for SEO.
-  siteLogo: "https://en.gravatar.com/userimage/11516795/11ac931d3c162cd15226e161772bca08.png?size=64", // Logo used for SEO and manifest.
-  siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
+  siteTitleAlt: "Kushal J - A Frontend Developer's Log", // Alternative site title for SEO.
+  siteLogo: "https://en.gravatar.com/userimage/11516795/a2b65eab1a444284c8c88a3f97838eb9.jpg?size=64", // Logo used for SEO and manifest.
+  siteUrl: "https://kutec.netlify.com/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A GatsbyJS starter with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "An online space to log everything I learn in my day-to-day work and personal life.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
+  siteRssTitle: "Kushal J - A Frontend Developer's Log", // Title of the RSS feed
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
-  disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
+  disqusShortname: "kushjays", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
-  dateFormat: "DD/MM/YYYY", // Date format for display.
+  dateFormat: "DD-MM-YYYY", // Date format for display.
   postsPerPage: 4, // Amount of posts displayed per listing page.
-  userName: "Advanced User", // Username to display in the author segment.
-  userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
-  userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "North Pole, Earth", // User location to display in the author segment.
-  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
+  userName: "Kushal J", // Username to display in the author segment.
+  userEmail: "ku@Kutec.co.in", // Email used for RSS feed's author segment
+  userTwitter: "kutec", // Optionally renders "Follow Me" in the UserInfo segment.
+  userLocation: "India", // User location to display in the author segment.
+  userAvatar: "https://en.gravatar.com/userimage/11516795/11ac931d3c162cd15226e161772bca08.jpg?size=200", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
@@ -30,16 +30,16 @@ const config = {
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/Vagr9K",
+      url: "https://twitter.com/kutec",
       iconClassName: "fa fa-twitter",
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
+      url: "mailto:ku@kutec.co.in",
       iconClassName: "fa fa-envelope",
     },
   ],
-  copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2021. Kushal J", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   navigation: [
@@ -60,6 +60,50 @@ const config = {
       label: "Blog",
       url: "//google.com",
       target: "_blank"
+    }
+  ],
+  homeIcons: [
+    {
+      id: 1,
+      label: "React",
+      url: "/react",
+      iconClasses: "fab fa-react",
+      badgeClasses: "badge btn disabled btn-primary btn-lg mr-2"
+    },
+    {
+      id: 2,
+      label: "Angular",
+      url: "categories/angular",
+      iconClasses: "fab fa-angular",
+      badgeClasses: "badge btn btn-danger btn-lg mr-2"
+    },
+    {
+      id: 3,
+      label: "JavaScript",
+      url: "/javascript",
+      iconClasses: "fab fa-js text-warning",
+      badgeClasses: "badge btn disabled btn-dark btn-lg mr-2"
+    },
+    {
+      id: 4,
+      label: "Sass",
+      url: "/sass",
+      iconClasses: "fab fa-sass",
+      badgeClasses: "badge btn disabled btn-danger btn-lg mr-2"
+    },
+    {
+      id: 5,
+      label: "CSS",
+      url: "/css",
+      iconClasses: "fab fa-css3-alt",
+      badgeClasses: "badge btn disabled btn-primary btn-lg mr-2"
+    },
+    {
+      id: 6,
+      label: "HTML",
+      url: "/html",
+      iconClasses: "fab fa-html5 text-danger",
+      badgeClasses: "badge btn disabled btn-light btn-lg"
     }
   ]
 };

@@ -1,12 +1,13 @@
 ---
-title: "Angular - How to render HTML without array items without a loop"
-cover: ""
-date: "2021-04-20"
-category: "angular"
-slug: "angular-render-array-items-without-for-loop"
+title: Angular - Render an array items without a for loop
+cover: ''
+date: '2021-04-20'
+category: angular
+slug: angular-render-array-without-for-loop
 tags:
     - javascript-join
     - angular-innerhtml
+lastmod: 2021-04-29T11:32:09.599Z
 ---
 
 

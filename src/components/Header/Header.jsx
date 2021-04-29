@@ -11,9 +11,9 @@ function Header({ config }) {
   return (
     <header className="header pl-4 pr-4 pt-2 pb-2">
       <nav className="navbar navbar-expand-lg navbar-light p-0">
-        <a className="navbar-brand is-gray" href="/">
+        <a className="navbar-brand" href="/">
           <figure className="image d-inline-block align-middle mb-0">
-            <img className="rounded-circle img-fluid" src={logo} />
+            <img className="img-fluid" src={logo} />
           </figure>
           <strong> {title}</strong>
         </a>

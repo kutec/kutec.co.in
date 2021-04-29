@@ -8,6 +8,10 @@ h2 {
     // font-size: calc(2vw + 1.4vh + .4vmin);
 }
 
+.display-4 {
+    @include font-size(3.5rem);
+}
+
 // Small devices (landscape phones, 576px and up)
 /* @media (min-width: 576px) {
     h1 {
@@ -19,7 +23,8 @@ h2 {
 @media (max-width: 768px) {
 
     h1,
-    h2 {
+    h2,
+    .display-4 {
         text-align: center;
     }
 }

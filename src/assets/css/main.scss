@@ -1,4 +1,3 @@
-/* =externam-libs */
 @import './lib';
 @import './rwd';
 
@@ -21,13 +20,10 @@ body {
     }
 }
 
-.home-hero {
-    // background: #ddd;
-}
-
 .header {
     background: #fff;
     box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+    min-height: 90px;
 }
 
 /* utility */
