@@ -32,8 +32,8 @@ function BlogPage({ pageContext, data }) {
     //     );
     // }
 
-    console.log('BlogPage: ', data);
-    console.log('BlogPage pageContext: ', pageContext);
+    // console.log('BlogPage: ', data);
+    // console.log('BlogPage pageContext: ', pageContext);
     const totalPosts = data.allMarkdownRemark.totalCount;
     const postEdges = data.allMarkdownRemark.edges;
     return (

@@ -1,33 +1,62 @@
-/* =externam-libs */
 @import './lib';
+@import './variables';
 @import './rwd';
 
 /* = */
 body {
-    background-color: #f3f1ee;
-}
-
-.ku-wrapper {
-    max-width: 1150px;
-    margin: 0 auto;
+    background-color: #fff;
 }
 
 .section {
-    margin: 3rem 0;
+    padding: 3rem 0;
 
     &.fh {
-        min-height: calc(100vh - 190px);
+        min-height: calc(100vh - 90px);
         height: 100%;
+    }
+
+    &:nth-child(1) {
+        background-color: rgb(206 216 25 / 50%);
+    }
+
+    &:nth-child(2) {
+        background-color: rgb(206 216 25 / 20%);
+    }
+
+    &.is-home {
+        .home-icons {
+            filter: $filterShadow;
+
+            >.badge {
+                margin-top: 10px;
+            }
+
+            [data-label] {
+                position: relative;
+            }
+
+            [data-label]:hover:after {
+                opacity: 1;
+                transition: all 0.2s ease 0.6s;
+                visibility: visible;
+            }
+
+            [data-label]:after {
+                content: attr(data-label);
+                z-index: 99999;
+                margin-left: 10px;
+            }
+        }
     }
 }
 
-.home-hero {
-    // background: #ddd;
-}
-
 .header {
-    background: #fff;
-    box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+    min-height: 90px;
+
+    .navbar {
+        background: rgb(255 255 255 / 90%);
+        box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+    }
 }
 
 /* utility */
@@ -43,8 +72,3 @@ img.is-rounded {
 .is-gray:hover {
     filter: brightness(1);
 }
-
-
-
-
-   
