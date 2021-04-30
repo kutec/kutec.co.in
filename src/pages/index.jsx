@@ -8,6 +8,7 @@ import { graphql } from "gatsby";
 function HomePage({ data }) {
   console.log('HomePage: ', data);
   const postEdges = data.allMarkdownRemark.edges;
+
   return (
     <Layout>
       <>
@@ -23,6 +24,7 @@ export default HomePage;
 export const query = graphql`
   {
     allMarkdownRemark(limit: 3, sort: {fields: [fields___date], order: DESC}) {
+      totalCount
       edges {
         node {
           fields {

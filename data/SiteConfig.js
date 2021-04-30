@@ -66,42 +66,42 @@ const config = {
     {
       id: 1,
       label: "React",
-      url: "/react",
+      url: "categories/react",
       iconClasses: "fab fa-react",
-      badgeClasses: "badge btn disabled btn-primary btn-lg mr-2"
+      badgeClasses: "badge badge-pill btn disabled btn-primary btn-lg mr-2"
     },
     {
       id: 2,
       label: "Angular",
       url: "categories/angular",
       iconClasses: "fab fa-angular",
-      badgeClasses: "badge btn btn-danger btn-lg mr-2"
+      badgeClasses: "badge badge-pill btn btn-danger btn-lg mr-2"
     },
     {
       id: 3,
       label: "JavaScript",
-      url: "/javascript",
+      url: "categories/javascript",
       iconClasses: "fab fa-js text-warning",
       badgeClasses: "badge btn disabled btn-dark btn-lg mr-2"
     },
     {
       id: 4,
       label: "Sass",
-      url: "/sass",
+      url: "categories/sass",
       iconClasses: "fab fa-sass",
       badgeClasses: "badge btn disabled btn-danger btn-lg mr-2"
     },
     {
       id: 5,
       label: "CSS",
-      url: "/css",
+      url: "categories/css",
       iconClasses: "fab fa-css3-alt",
       badgeClasses: "badge btn disabled btn-primary btn-lg mr-2"
     },
     {
       id: 6,
       label: "HTML",
-      url: "/html",
+      url: "categories/html",
       iconClasses: "fab fa-html5 text-danger",
       badgeClasses: "badge btn disabled btn-light btn-lg"
     }

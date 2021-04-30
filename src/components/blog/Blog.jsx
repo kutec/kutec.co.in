@@ -6,7 +6,7 @@ const Articles = ({ postEdges, totalPosts }) => {
 
   return (
     <>
-      <section className="section p-0 content is-small">
+      <section className="section fh">
         <div className="container">
           <h1 className="title">Articles <small>{totalPosts}</small></h1>
           <PostListing postEdges={postEdges} showCategory={true} />

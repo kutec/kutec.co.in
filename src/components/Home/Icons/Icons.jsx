@@ -8,9 +8,14 @@ function Icons() {
 
   return (
     <div class="d-grid gap-2 mx-auto">
-      <div className="display-4 mt-5 mb-5">
+      <div className="home-icons display-4 mt-4 mb-4">
         {icons.map((icon) => (
-          <a className={icon.badgeClasses} key={icon.id} href={icon.url}>
+          <a
+            className={icon.badgeClasses}
+            key={icon.id}
+            href={icon.url}
+            data-label={icon.label}
+          >
             <i className={icon.iconClasses}></i>
           </a>
         ))}

@@ -8,13 +8,26 @@ import config from "../../data/SiteConfig";
 export default function CategoryTemplate({ pageContext, data }) {
   const { category } = pageContext;
   const postEdges = data.allMarkdownRemark.edges;
+  const totalPosts = data.allMarkdownRemark.totalCount;
+
   return (
     <Layout>
       <div className="category-container">
         <Helmet
           title={`Posts in category "${category}" | ${config.siteTitle}`}
         />
-        <PostListing postEdges={postEdges} />
+        <section className="section fh">
+          <div className="container">
+            <h1 class="title">
+              <strong>{category.substring(0, 1).toUpperCase()}</strong>
+              {category.substring(1)}
+            </h1>
+            <p>
+              <strong>{totalPosts}</strong> article(s) found.
+            </p>
+            <PostListing postEdges={postEdges} />
+          </div>
+        </section>
       </div>
     </Layout>
   );
