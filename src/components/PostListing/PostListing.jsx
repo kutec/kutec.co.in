@@ -42,7 +42,7 @@ function PostListing({ postEdges, showCategory }) {
                 </text>
               </svg>
               <div className="media-body">
-                <h5 className="mt-0 mb-1" key={post.title}>
+                <h5 className="mt-0 mb-2" key={post.title}>
                   {/* <strong className="mt-0" key={post.title}> */}
                   <Link to={`/blog${post.path}`}>{post.title}</Link>
                   {/* </strong> */}

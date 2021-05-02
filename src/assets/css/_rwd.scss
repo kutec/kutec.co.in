@@ -1,11 +1,34 @@
 /* =rwd */
+
 h1 {
     @include font-size(2rem);
+    font-weight: 900;
 }
 
 h2 {
     @include font-size(1.4rem);
+    font-weight: 900;
     // font-size: calc(2vw + 1.4vh + .4vmin);
+}
+
+h3 {
+    @include font-size(1.25rem);
+    font-weight: 900;
+}
+
+h4 {
+    @include font-size(1.15rem);
+    font-weight: 900;
+}
+
+// todo
+div.deckgo-highlight-code-container code {
+    --deckgo-highlight-code-font-size: .2rem;
+}
+
+p {
+    @include font-size(1.12rem);
+    letter-spacing: 1.7px;
 }
 
 .display-4 {
@@ -25,7 +48,9 @@ h2 {
     h1,
     h2,
     .display-4 {
-        text-align: center;
+        .is-home & {
+            text-align: center;
+        }
     }
 }
 

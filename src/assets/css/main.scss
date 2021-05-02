@@ -5,6 +5,7 @@
 /* = */
 body {
     background-color: #fff;
+    font-family: 'Roboto Slab', serif;
 }
 
 .section {
@@ -16,11 +17,11 @@ body {
     }
 
     &:nth-child(1) {
-        background-color: rgb(206 216 25 / 50%);
+        background-color: rgb(206 216 25 / 30%);
     }
 
     &:nth-child(2) {
-        background-color: rgb(206 216 25 / 20%);
+        background-color: rgb(206 216 25 / 10%);
     }
 
     &.is-home {
@@ -46,6 +47,13 @@ body {
                 z-index: 99999;
                 margin-left: 10px;
             }
+        }
+    }
+
+    &:not(.is-home) {
+        .badge {
+            font-weight: 400;
+            font-size: .85rem;
         }
     }
 }

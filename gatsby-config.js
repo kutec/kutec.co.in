@@ -51,6 +51,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'dracula'
+            }
+          },
+          {
             resolve: `gatsby-remark-relative-images`,
           },
           {
@@ -63,8 +70,7 @@ module.exports = {
             resolve: "gatsby-remark-responsive-iframe",
           },
           "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs",
+          "gatsby-remark-autolink-headers"
         ],
       },
     },
