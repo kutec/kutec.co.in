@@ -4,7 +4,6 @@ import PostCategories from "../PostCategories/PostCategories";
 
 function PostListing({ postEdges, showCategory }) {
   const postList = [];
-  console.log("ku::: postlisting", postEdges);
   postEdges.forEach((postEdge) => {
     postList.push({
       path: postEdge.node.fields.slug,
@@ -24,7 +23,7 @@ function PostListing({ postEdges, showCategory }) {
         /* Your post list here. */
         postList.map((post) => (
           <>
-            <li className="media my-4" key={post.id}>
+            <li className="media my-4" key={post.path}>
               <svg
                 className="bd-placeholder-img mr-3"
                 width="64"

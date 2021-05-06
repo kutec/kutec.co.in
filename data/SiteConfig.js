@@ -13,7 +13,7 @@ const config = {
   disqusShortname: "kushjays", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD-MM-YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
+  postsPerPage: 2, // Amount of posts displayed per listing page.
   userName: "Kushal J", // Username to display in the author segment.
   userEmail: "ku@Kutec.co.in", // Email used for RSS feed's author segment
   userTwitter: "kutec", // Optionally renders "Follow Me" in the UserInfo segment.
@@ -66,9 +66,9 @@ const config = {
     {
       id: 1,
       label: "React",
-      url: "categories/react",
+      url: "categories/reactjs",
       iconClasses: "fab fa-react",
-      badgeClasses: "badge badge-pill btn disabled btn-primary btn-lg mr-2"
+      badgeClasses: "badge badge-pill btn btn-primary btn-lg mr-2"
     },
     {
       id: 2,
