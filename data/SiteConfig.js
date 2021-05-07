@@ -13,7 +13,7 @@ const config = {
   disqusShortname: "kushjays", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD-MM-YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
+  postsPerPage: 2, // Amount of posts displayed per listing page.
   userName: "Kushal J", // Username to display in the author segment.
   userEmail: "ku@Kutec.co.in", // Email used for RSS feed's author segment
   userTwitter: "kutec", // Optionally renders "Follow Me" in the UserInfo segment.
@@ -43,32 +43,32 @@ const config = {
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   navigation: [
-    {
-      id: 1,
-      label: "About",
-      url: "/about",
-      target: ""
-    },
-    {
-      id: 2,
-      label: "Work",
-      url: "/work",
-      target: ""
-    },
+    // {
+    //   id: 1,
+    //   label: "About",
+    //   url: "/about",
+    //   target: ""
+    // },
+    // {
+    //   id: 2,
+    //   label: "Work",
+    //   url: "/work",
+    //   target: ""
+    // },
     {
       id: 3,
       label: "Blog",
-      url: "//google.com",
-      target: "_blank"
+      url: "/blog",
+      target: ""
     }
   ],
   homeIcons: [
     {
       id: 1,
       label: "React",
-      url: "categories/react",
+      url: "categories/reactjs",
       iconClasses: "fab fa-react",
-      badgeClasses: "badge badge-pill btn disabled btn-primary btn-lg mr-2"
+      badgeClasses: "badge badge-pill btn btn-primary btn-lg mr-2"
     },
     {
       id: 2,

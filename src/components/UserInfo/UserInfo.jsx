@@ -5,10 +5,12 @@ function UserInfo({ config, expanded }) {
   const { userTwitter } = config;
 
   return (
-    <Follow
-      username={userTwitter}
-      options={{ count: expanded ? true : "none" }}
-    />
+    <div className="d-inline-block align-middle mr-3">
+      <Follow
+        username={userTwitter}
+        options={{ count: expanded ? true : "none" }}
+      />
+    </div>
   );
 }
 

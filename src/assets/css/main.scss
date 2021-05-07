@@ -1,11 +1,18 @@
 @import './lib';
 @import './variables';
 @import './rwd';
+@import './typography';
+@import './code-highlight';
 
 /* = */
 body {
     background-color: #fff;
+    font-family: 'Roboto Slab', serif;
+    // font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.7rem;
 }
+
+
 
 .section {
     padding: 3rem 0;
@@ -16,11 +23,11 @@ body {
     }
 
     &:nth-child(1) {
-        background-color: rgb(206 216 25 / 50%);
+        background-color: rgb(206 216 25 / 25%);
     }
 
     &:nth-child(2) {
-        background-color: rgb(206 216 25 / 20%);
+        background-color: rgb(206 216 25 / 10%);
     }
 
     &.is-home {
@@ -46,6 +53,13 @@ body {
                 z-index: 99999;
                 margin-left: 10px;
             }
+        }
+    }
+
+    &:not(.is-home) {
+        .badge {
+            font-weight: 400;
+            font-size: .85rem;
         }
     }
 }

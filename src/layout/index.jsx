@@ -22,6 +22,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../assets/css/main.scss";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 
 library.add(
   fab,
@@ -38,6 +39,8 @@ library.add(
 );
 
 export default function MainLayout({ children }) {
+  deckDeckGoHighlightElement();
+  
   return (
     <div data-ref="MainLayout - index.jsx">
       <Helmet>
@@ -46,11 +49,6 @@ export default function MainLayout({ children }) {
       </Helmet>
       <Header config={config} />
       <div>{children}</div>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-      ></script>
     </div>
   );
 }

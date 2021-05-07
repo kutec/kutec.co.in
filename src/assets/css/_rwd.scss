@@ -1,15 +1,36 @@
 /* =rwd */
+
 h1 {
     @include font-size(2rem);
+    font-weight: 900;
 }
 
 h2 {
     @include font-size(1.4rem);
+    font-weight: 900;
     // font-size: calc(2vw + 1.4vh + .4vmin);
+}
+
+h3 {
+    @include font-size(1.25rem);
+    font-weight: 900;
+}
+
+h4 {
+    @include font-size(1.15rem);
+    font-weight: 900;
+}
+
+p {
+    @include font-size(1.12rem);
 }
 
 .display-4 {
     @include font-size(3.5rem);
+}
+
+.gatsby-highlight {
+    @include font-size(1rem);
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -25,7 +46,15 @@ h2 {
     h1,
     h2,
     .display-4 {
-        text-align: center;
+        .is-home & {
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    p {
+        max-width: 700px
     }
 }
 

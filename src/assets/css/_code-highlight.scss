@@ -1,0 +1,93 @@
+.gatsby-highlight {
+    background-color: rgb(0 0 0 / 75%);
+    border-radius: 0.3em;
+    padding: 0;
+    margin: 1rem 0 2rem;
+    overflow: auto;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 55%);
+
+    .gatsby-highlight-code-line {
+        background-color: rgb(255 255 255 / 20%);
+        border-left: 0.40em solid rgb(207 217 32);
+        display: block;
+        margin: 0 -1em;
+        padding: 0 1em 0 .60em;
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+        color: #ccc;
+        background-color: transparent;
+
+    }
+
+    .token.punctuation {
+        color: #ccc;
+    }
+
+    .token.operator {
+        color: #ff8282;
+    }
+
+    .token.attr-name {
+        color: #bbbbff;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+        color: #ffac1e;
+        font-style: italic;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: rgb(207 216 37);
+    }
+
+    .token.selector,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.url,
+    .token.inserted {
+        color: #ccc;
+    }
+
+    pre[class*="language-"] {
+        margin: 0;
+    }
+
+    .line-numbers .line-numbers-rows{
+        top: 1rem;
+        left: 1rem !important;
+    }
+
+}
+
+/* Prompt for all users */
+.command-line-prompt > span:before {
+    color: #999;
+    content: " ";
+    display: block;
+    padding-right: 0.8em;
+  }
+  
+  /* Prompt for all users */
+  .command-line-prompt > span[data-user]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] $";
+  }
+  
+  /* Prompt for root */
+  .command-line-prompt > span[data-user="root"]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] #";
+  }
+  
+  .command-line-prompt > span[data-prompt]:before {
+    content: attr(data-prompt);
+  }

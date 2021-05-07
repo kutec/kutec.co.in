@@ -6,14 +6,15 @@ import PostCategories from "../PostCategories/PostCategories";
 import Icons from "./Icons/Icons";
 
 const Home = ({ postEdges }) => {
+  // console.log('111: ',postEdges, PostCategories);
   return (
     <>
       <div className="is-home section fh home-hero text-dark d-flex align-items-center">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-9 col-sm-12 order-md-0 order-1">
               <h1 className="title has-text-weight-bold">
-                <small>Namaste, I am</small> Kushal Jayswal
+                <small>Namaste, I am</small> Kushal J.
               </h1>
               <h2 className="subtitle">
                 <small>A</small> frontend developer <small>from India.</small>
@@ -45,23 +46,8 @@ const Home = ({ postEdges }) => {
           </div>
         </div>
       </div>
-      {/* <section className="section hero">
-        <div className="hero-body hero-body p-0">
-          <div className="columns">
-            <div className="column is-8 content is-large">
-              <h1 className="title has-text-weight-bold">Kushal J.</h1>
-              <h2 className="subtitle">Frontend Developer from India</h2>
-            </div>
-            <div className="column is-2">
-              <figure className="image ml-0 mr-0">
-                <img className="is-rounded" src="https://en.gravatar.com/userimage/11516795/11ac931d3c162cd15226e161772bca08.jpg?size=400" />
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
-      <section className="section fh d-flex align-items-center">
+      <section className="section">
         <div className="container">
           <h4>
             <span>Recent Thoughts</span>

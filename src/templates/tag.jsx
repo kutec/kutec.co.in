@@ -16,7 +16,7 @@ export default function TagTemplate({ pageContext, data }) {
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
         <section className="section fh">
           <div className="container">
-            <h1 class="title">{tag}</h1>
+            <h1 className="title">{tag}</h1>
             <p>
               <strong>{totalPosts}</strong> article(s) found.
             </p>

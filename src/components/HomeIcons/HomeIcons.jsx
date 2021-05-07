@@ -1,10 +1,8 @@
 import React from "react";
-// import { Link } from "gatsby";
-import config from "../../../../data/SiteConfig";
+import config from "../../../data/SiteConfig";
 
-function Icons() {
+function HomeIcons() {
   const icons = config.homeIcons;
-  console.log("icons::: ", icons);
 
   return (
     <div className="d-grid gap-2 mx-auto">
@@ -24,4 +22,4 @@ function Icons() {
   );
 }
 
-export default Icons;
+export default HomeIcons;

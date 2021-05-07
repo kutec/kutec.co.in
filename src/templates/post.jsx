@@ -5,14 +5,17 @@ import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
+import PostCategories from "../components/PostCategories/PostCategories";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.scss";
-import "./post.scss";
+// import "./b16-tomorrow-dark.scss";
+// import "./post.scss";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function PostTemplate({ data, pageContext }) {
+  console.log("222::: ", data, pageContext);
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
@@ -27,17 +30,35 @@ export default function PostTemplate({ data, pageContext }) {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
+
         <div data-ref="tmpl - post.jsx">
-          <h1>{post.title}</h1>
-          {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
+          {/* <div className="container"> */}
+          <div>
+            <header className="section">
+              <div className="container">
+                <h1>{post.title}</h1>
+
+                {/* <UserInfo config={config} /> */}
+                <PostCategories category={post.category} />
+                <PostTags tags={post.tags} />
+              </div>
+            </header>
+
+            {/* eslint-disable-next-line react/no-danger */}
+            <div className="section bg-white">
+              <div className="container am">
+                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              </div>
+            </div>
+            {/* <div className="post-meta">
+              <PostTags tags={post.tags} />
+              <SocialLinks postPath={slug} postNode={postNode} />
+            </div> */}
+
+            {/* <Disqus postNode={postNode} /> */}
+            {/* <Footer config={config} /> */}
+            {/* </div> */}
           </div>
-          <UserInfo config={config} />
-          <Disqus postNode={postNode} />
-          <Footer config={config} />
         </div>
       </div>
     </Layout>

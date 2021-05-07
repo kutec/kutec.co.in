@@ -18,13 +18,14 @@ export default function CategoryTemplate({ pageContext, data }) {
         />
         <section className="section fh">
           <div className="container">
-            <h1 class="title">
+            <h1 className="title">
               <strong>{category.substring(0, 1).toUpperCase()}</strong>
               {category.substring(1)}
             </h1>
             <p>
               <strong>{totalPosts}</strong> article(s) found.
             </p>
+
             <PostListing postEdges={postEdges} />
           </div>
         </section>

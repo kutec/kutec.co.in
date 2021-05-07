@@ -51,6 +51,21 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              prompt: {
+                user: 'ku',
+                host: 'localhost',
+                global: false,
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-relative-images`,
           },
           {
@@ -63,8 +78,7 @@ module.exports = {
             resolve: "gatsby-remark-responsive-iframe",
           },
           "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs",
+          "gatsby-remark-autolink-headers"
         ],
       },
     },
