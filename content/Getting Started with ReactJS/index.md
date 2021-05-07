@@ -24,19 +24,19 @@ To start with any development project, we need to setup a development enviorment
 
 #### Step 1 - Install `create-react-app` gloabally:
 
-```
+```bash
 npm i create-react-app -g
 ```
 
 #### Step 2 - Create a new Reactjs project
 
-```
+```bash
 npx create-react-app my-app
 ```
 
 OR
 
-```
+```shell
 create-react-app my-app
 ```
 
@@ -44,12 +44,10 @@ create-react-app my-app
 
 Once the project creation is successful, you can switch over the project directory and run the project.
 
-```
+```shell
 cd my-app
 npm start
 ```
-
-<img style="max-width: 100%" alt='Credit: https://github.com/facebook/create-react-app' src='//camo.githubusercontent.com/b275c108e1c9e2d1c732a66ca1e0b6ecb1ae260824fb5d6ca4c4e46ee85d1ca0/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f66616365626f6f6b2f6372656174652d72656163742d61707040323762343261633765666130313866323534313135336162333064363331383066356661333965302f73637265656e636173742e737667'>
 
 ## Reactjs - Quick Options
 
@@ -73,14 +71,14 @@ You can simply include below scripts to your HTML page and boom, you are up with
 
 #### For Developers
 
-```
+```html
 <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 ```
 
 #### For Production
 
-```
+```html
 <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 ```

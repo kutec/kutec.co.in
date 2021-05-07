@@ -6,15 +6,15 @@ import PostCategories from "../PostCategories/PostCategories";
 import Icons from "./Icons/Icons";
 
 const Home = ({ postEdges }) => {
-  console.log('111: ',postEdges, PostCategories);
+  // console.log('111: ',postEdges, PostCategories);
   return (
     <>
       <div className="is-home section fh home-hero text-dark d-flex align-items-center">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-9 col-sm-12 order-md-0 order-1">
               <h1 className="title has-text-weight-bold">
-                <small>Namaste, I am</small> Kushal Jayswal
+                <small>Namaste, I am</small> Kushal J.
               </h1>
               <h2 className="subtitle">
                 <small>A</small> frontend developer <small>from India.</small>

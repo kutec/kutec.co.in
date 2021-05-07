@@ -21,17 +21,16 @@ h4 {
     font-weight: 900;
 }
 
-// todo
-div.deckgo-highlight-code-container code {
-    --deckgo-highlight-code-font-size: .2rem;
-}
-
 p {
     @include font-size(1.12rem);
 }
 
 .display-4 {
     @include font-size(3.5rem);
+}
+
+.gatsby-highlight {
+    @include font-size(1rem);
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -50,6 +49,12 @@ p {
         .is-home & {
             text-align: center;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    p {
+        max-width: 700px
     }
 }
 

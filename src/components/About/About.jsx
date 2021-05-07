@@ -1,11 +1,10 @@
 import React from "react";
-import "./About.scss";
 
 function About() {
   return (
     <div className="about">
       <h1>
-        Edit About component or pages/about.jsx to include your information.
+        Something is being drafted...
       </h1>
     </div>
   );

@@ -46,17 +46,17 @@ export default function PostTemplate({ data, pageContext }) {
 
             {/* eslint-disable-next-line react/no-danger */}
             <div className="section bg-white">
-              <div className="container">
+              <div className="container am">
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
               </div>
             </div>
-            <div className="post-meta">
+            {/* <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
-            </div>
+            </div> */}
 
-            <Disqus postNode={postNode} />
-            <Footer config={config} />
+            {/* <Disqus postNode={postNode} /> */}
+            {/* <Footer config={config} /> */}
             {/* </div> */}
           </div>
         </div>

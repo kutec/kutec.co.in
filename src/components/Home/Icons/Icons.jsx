@@ -7,7 +7,7 @@ function Icons() {
   console.log("icons::: ", icons);
 
   return (
-    <div class="d-grid gap-2 mx-auto">
+    <div className="d-grid gap-2 mx-auto">
       <div className="home-icons display-4 mt-4 mb-4">
         {icons.map((icon) => (
           <a

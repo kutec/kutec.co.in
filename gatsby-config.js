@@ -51,11 +51,19 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-highlight-code`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
-              terminal: 'carbon',
-              theme: 'dracula'
-            }
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              prompt: {
+                user: 'ku',
+                host: 'localhost',
+                global: false,
+              },
+            },
           },
           {
             resolve: `gatsby-remark-relative-images`,

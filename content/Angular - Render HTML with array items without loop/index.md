@@ -7,6 +7,7 @@ slug: angular-render-array-without-for-loop
 tags:
   - javascript-join
   - angular-innerhtml
+  - use-case
 lastmod: 2021-04-29T11:32:09.599Z
 ---
 
@@ -20,7 +21,7 @@ Below response was coming from the backend service.
 
 ### JSON
 
-```
+```json{1,4-6}
 {
 	"arrayKey": {
 		"<div class=\"some-class\">",
@@ -41,7 +42,7 @@ Below response was coming from the backend service.
 
 #### Suggested Solution (which was rejected due to the reason mentioned above)
 
-```
+```json
 {
 	"arrayKey": {
 		"<div class=\"some-class\"><h2>Some H2 text</h2><p>Some P text</p><ol><li>some text 1</li><li>some text 2</li><li>some text 3</li><li>some text 4</li><li>some text 5</li></ol><div>"
@@ -55,8 +56,8 @@ If we try with above - suggested solution - then we would get the exact output a
 
 Below is the simple HTML rendering the UI.
 
-```
-<div [innerHtml]="data?.arrayKey></div>
+```html
+<div [innerHtml]="data?.arrayKey"></div>
 ```
 
 Now let's deal with the strings-array format to render the same UI. Below was the UI we were getting.
@@ -65,7 +66,7 @@ We tried to achive that by adding a for-loop logic in TS file. But somehow deu t
 
 ### Another HTML
 
-```
+```html
 <div *ngFor="let item of data?.arrayKey" [innerHTML]="item"></div>
 ```
 
@@ -81,6 +82,6 @@ To fix this broken UI we did a trick with pure JavaScript - `join()`.
 
 Below is the simple HTML rendering the UI.
 
-```
-<div [innerHtml]="data?.arrayKey.join('')></div>
+```html
+<div [innerHtml]="data?.arrayKey.join('')"></div>
 ```
