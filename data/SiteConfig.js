@@ -15,10 +15,10 @@ const config = {
   dateFormat: "DD-MM-YYYY", // Date format for display.
   postsPerPage: 2, // Amount of posts displayed per listing page.
   userName: "Kushal J", // Username to display in the author segment.
-  userEmail: "ku@Kutec.co.in", // Email used for RSS feed's author segment
+  userEmail: "ku@kutec.co.in", // Email used for RSS feed's author segment
   userTwitter: "kutec", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "India", // User location to display in the author segment.
-  userAvatar: "https://en.gravatar.com/userimage/11516795/11ac931d3c162cd15226e161772bca08.jpg?size=200", // User avatar to display in the author segment.
+  userAvatar: "https://en.gravatar.com/userimage/11516795/234b5038fc3af6813d55351eeafa78ac.jpg?size=400", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
@@ -68,14 +68,14 @@ const config = {
       label: "React",
       url: "categories/reactjs",
       iconClasses: "fab fa-react",
-      badgeClasses: "badge badge-pill btn btn-primary btn-lg mr-2"
+      badgeClasses: "badge badge-pill btn text-white btn-lg mr-2 hi-react"
     },
     {
       id: 2,
       label: "Angular",
       url: "categories/angular",
       iconClasses: "fab fa-angular",
-      badgeClasses: "badge badge-pill btn btn-danger btn-lg mr-2"
+      badgeClasses: "badge badge-pill btn text-white btn-lg mr-2 hi-angular"
     },
     {
       id: 3,

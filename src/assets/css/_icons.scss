@@ -1,0 +1,55 @@
+@mixin c-icon($unicode, $bg: #aaa, $fg: #fff, $size: 64px, $fSize: 2rem, $mr: 1rem) {
+    &:before {
+        content: $unicode;
+        background-color: $bg;
+        color: $fg;
+    }
+
+
+    @media (min-width: 768px) {
+        &.ci-128:before {
+            width: $size;
+            height: $size;
+            font-size: $fSize;
+            margin-right: $mr;
+        }
+    }
+}
+
+
+[class*="c-"] {
+    &:before {
+        font-size: 2rem;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Font Awesome 5 Brands";
+        border-radius: .3rem;
+        margin-right: 1rem;
+    }
+}
+
+.c {
+    &-reactjs {
+        @include c-icon('\f41b', $react, #fff, 128px, 4rem, 2rem);
+    }
+
+    &-angular {
+        @include c-icon('\f420', $angular, #fff, 128px, 4rem, 2rem);
+    }
+}
+
+.hi {
+    &-react {
+        color: $react;
+        background-color: $react;
+        border: 0;
+    }
+
+    &-angular {
+        background-color: $angular;
+        border: 0;
+    }
+}
