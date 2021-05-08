@@ -4,7 +4,26 @@ h3,
 h4,
 h5,
 h6 {
-    .am &{
+    .am & {
         margin: 3rem 0 1rem;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        text-shadow: $textShadow;
+    }
+}
+
+.is-home {
+    .badge {
+        text-shadow: $textShadow;
+
+        &:hover {
+            text-shadow: $textShadowDark;
+        }
     }
 }

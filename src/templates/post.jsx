@@ -36,11 +36,18 @@ export default function PostTemplate({ data, pageContext }) {
           <div>
             <header className="section">
               <div className="container">
-                <h1>{post.title}</h1>
+                <div className="d-flex">
+                  <span
+                    className={"c-" + post.category + " ci-128 d-inline-block"}
+                  />
+                  <div>
+                    <h1>{post.title}</h1>
 
-                {/* <UserInfo config={config} /> */}
-                <PostCategories category={post.category} />
-                <PostTags tags={post.tags} />
+                    {/* <UserInfo config={config} /> */}
+                    <PostCategories category={post.category} />
+                    <PostTags tags={post.tags} />
+                  </div>
+                </div>
               </div>
             </header>
 

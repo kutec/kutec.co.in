@@ -3,12 +3,17 @@
 @import './rwd';
 @import './typography';
 @import './code-highlight';
+@import './icons';
 
 /* = */
+*,
+*:hover {
+    transition: all .3s ease-in-out !important;
+}
+
 body {
     background-color: #fff;
     font-family: 'Roboto Slab', serif;
-    // font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     line-height: 1.7rem;
 }
 
@@ -23,19 +28,30 @@ body {
     }
 
     &:nth-child(1) {
-        background-color: rgb(206 216 25 / 25%);
+        // background-color: rgb(206 216 25 / 25%);
+        background-color: #eee;
     }
 
     &:nth-child(2) {
-        background-color: rgb(206 216 25 / 10%);
+        // background-color: rgb(206 216 25 / 10%);
     }
 
     &.is-home {
         .home-icons {
             filter: $filterShadow;
 
-            >.badge {
+            .badge {
                 margin-top: 10px;
+                filter: $filterShadow grayscale(1);
+
+                &:hover {
+                    filter: $filterShadow grayscale(0);
+                }
+
+                &.disabled {
+                    filter: $filterShadow grayscale(1) opacity(30%);
+
+                }
             }
 
             [data-label] {
@@ -69,7 +85,15 @@ body {
 
     .navbar {
         background: rgb(255 255 255 / 90%);
-        box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+        // box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+    }
+}
+
+.user-avtar {
+    filter: $filterShadow grayscale(1);
+
+    &:hover {
+        filter: $filterShadowHover grayscale(0);
     }
 }
 
