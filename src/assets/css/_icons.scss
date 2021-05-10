@@ -9,9 +9,13 @@
     @media (min-width: 768px) {
         &.ci-128:before {
             width: $size;
-            height: $size;
+            min-height: $size;
             font-size: $fSize;
             margin-right: $mr;
+
+            .single-page & {
+                font-size: $fSize + 1;
+            }
         }
     }
 }
@@ -19,25 +23,36 @@
 
 [class*="c-"] {
     &:before {
-        font-size: 2rem;
+        font-size: 3rem;
         width: 64px;
-        height: 64px;
+        min-height: 64px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: "Font Awesome 5 Brands";
         border-radius: .3rem;
         margin-right: 1rem;
+        filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 50%));
     }
 }
 
 .c {
     &-reactjs {
         @include c-icon('\f41b', $react, #fff, 128px, 4rem, 2rem);
+
+        &:before {
+            border-radius: 2rem;
+        }
+
     }
 
     &-angular {
         @include c-icon('\f420', $angular, #fff, 128px, 4rem, 2rem);
+
+        &:before {
+            border-radius: 2rem;
+        }
     }
 }
 
@@ -51,5 +66,31 @@
     &-angular {
         background-color: $angular;
         border: 0;
+    }
+}
+
+.category-page {
+    .section:nth-child(1) {
+        &.reactjs {
+            background-color: $reactBg;
+
+            .c-reactjs {
+                &::before {
+                    background-color: #fff;
+                    color: $react;
+                }
+            }
+        }
+
+        &.angular {
+            background-color: $angularBg;
+
+            .c-angular {
+                &::before {
+                    background-color: #fff;
+                    color: $angular;
+                }
+            }
+        }
     }
 }

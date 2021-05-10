@@ -12,11 +12,11 @@ export default function CategoryTemplate({ pageContext, data }) {
 
   return (
     <Layout>
-      <div className="category-container">
+      <div className="category-page">
         <Helmet
           title={`Posts in category "${category}" | ${config.siteTitle}`}
         />
-        <section className="section fh">
+        <section className={category + " section fh"}>
           <div className="container">
             <h1 className="title">
               <strong>{category.substring(0, 1).toUpperCase()}</strong>
@@ -26,7 +26,7 @@ export default function CategoryTemplate({ pageContext, data }) {
               <strong>{totalPosts}</strong> article(s) found.
             </p>
 
-            <PostListing postEdges={postEdges} />
+            <PostListing postEdges={postEdges} showTags={true} />
           </div>
         </section>
       </div>

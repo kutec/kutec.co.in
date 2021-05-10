@@ -1,12 +1,14 @@
 // colors
-$react: #00d8ff;
-$angular: #b52e31;
+$react: rgb(0 216 255);
+$reactBg: rgb(0 216 255 / 10%);
+$angular: rgb(221 0 49);
+$angularBg: rgb(221 0 49 / 10%);
 $js: #f7df1e;
 $scss: #d20962;
 $css: #00d8ff;
 $html: #e34f26;
 
-$link: rgb(206 219 27);
+$link: rgb(0 137 162) !important;
 
 // shadows
 $filterShadow: drop-shadow(0 2px 2px rgba(10, 16, 20, .25));

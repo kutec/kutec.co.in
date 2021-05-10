@@ -25,6 +25,16 @@ body {
     &.fh {
         min-height: calc(100vh - 90px);
         height: 100%;
+
+        @media (max-width: 768px) {
+            .is-home & {
+                min-height: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 1.5rem 0;
     }
 
     &:nth-child(1) {
@@ -42,10 +52,10 @@ body {
 
             .badge {
                 margin-top: 10px;
-                filter: $filterShadow grayscale(1);
+                filter: $filterShadow opacity(70%);
 
                 &:hover {
-                    filter: $filterShadow grayscale(0);
+                    filter: $filterShadow grayscale(0) opacity(100%);
                 }
 
                 &.disabled {
@@ -76,6 +86,37 @@ body {
         .badge {
             font-weight: 400;
             font-size: .85rem;
+        }
+    }
+
+    .prev-post {
+        background-color: #eee;
+
+        &:before {
+            content: "Previous Post";
+            display: block;
+            font-size: 11px;
+        }
+    }
+
+    .next-post {
+        background-color: #ddd;
+
+        &:before {
+            content: "Next Post";
+            display: block;
+            font-size: 11px;
+            text-align: right;
+        }
+    }
+
+    .all-post {
+        padding: 1rem 2rem;
+
+        &:before {
+            content: "All Posts";
+            display: block;
+            font-size: 11px;
         }
     }
 }
