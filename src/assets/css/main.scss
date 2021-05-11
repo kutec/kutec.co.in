@@ -138,6 +138,16 @@ body {
     }
 }
 
+
+.posts li {
+    filter: grayscale(1);
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+
 /* utility */
 img.is-rounded {
     max-height: 256px;

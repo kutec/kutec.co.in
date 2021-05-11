@@ -23,7 +23,7 @@ function PostListing({ postEdges, showCategory, showTags }) {
   });
 
   return (
-    <ul className="list-unstyled">
+    <ul className="list-unstyled posts">
       {
         /* Your post list here. */
         postList.map((post) => (
