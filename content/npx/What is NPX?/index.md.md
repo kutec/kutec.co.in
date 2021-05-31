@@ -10,9 +10,9 @@ tags:
   - npm
 ---
 
-If you have 
+NPX exists since the version 
 
 Stay tuned and happy coding :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjAwNDI1ODAsMzY4NDc5OTg4XX0=
+eyJoaXN0b3J5IjpbODMxMjU0NDgzLDM2ODQ3OTk4OF19
 -->
