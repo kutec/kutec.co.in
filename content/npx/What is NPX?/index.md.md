@@ -2,7 +2,7 @@
 title: What is NPX?
 cover: ""
 date: "2021-05-31"
-category: npx
+category: other
 slug: what-is-npx
 tags:
   - beginner
@@ -12,5 +12,5 @@ tags:
 
 Stay tuned and happy coding :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4NDc5OTg4XX0=
+eyJoaXN0b3J5IjpbMTI0NTY5NjU5MCwzNjg0Nzk5ODhdfQ==
 -->
