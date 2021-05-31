@@ -10,9 +10,9 @@ tags:
   - npm
 ---
 
-NPX exists since the version 
+NPX exists since the npm version 5.2.
 
 Stay tuned and happy coding :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxMjU0NDgzLDM2ODQ3OTk4OF19
+eyJoaXN0b3J5IjpbOTgzNjQ2NDQxLDM2ODQ3OTk4OF19
 -->
