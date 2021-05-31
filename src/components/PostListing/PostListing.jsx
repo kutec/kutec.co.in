@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import PostCategories from "../PostCategories/PostCategories";
+import PostTags from "../PostTags/PostTags";
 
-function PostListing({ postEdges, showCategory }) {
+function PostListing({ postEdges, showCategory, showTags }) {
   const postList = [];
+  let newPath;
   postEdges.forEach((postEdge) => {
     postList.push({
       path: postEdge.node.fields.slug,
@@ -15,10 +17,13 @@ function PostListing({ postEdges, showCategory }) {
       excerpt: postEdge.node.excerpt,
       timeToRead: postEdge.node.timeToRead,
     });
+
+    
+    
   });
 
   return (
-    <>
+    <ul className="list-unstyled posts">
       {
         /* Your post list here. */
         postList.map((post) => (
@@ -27,18 +32,21 @@ function PostListing({ postEdges, showCategory }) {
             key={Math.random()}
           >
             <div className="media-body">
-              <h5 className="mt-0 mb-2" key={post.title}>
+              <h5 className="m-0" key={post.title}>
                 {/* <strong className="mt-0" key={post.title}> */}
-                <Link to={`/blog${post.path}`}>{post.title}</Link>
+                <Link to={'/'+post.category + post.path}>
+                  {post.title}
+                </Link>
                 {/* </strong> */}
               </h5>
 
               {showCategory ? <PostCategories category={post.category} /> : ""}
+              {showTags ? <PostTags tags={post.tags} /> : ""}
             </div>
           </li>
         ))
       }
-    </>
+    </ul>
   );
 }
 

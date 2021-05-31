@@ -6,7 +6,7 @@ import { userAvatar } from "../../../data/SiteConfig";
 const Home = ({ postEdges }) => {
   return (
     <>
-      <div className="is-home section fh home-hero text-dark d-flex align-items-center">
+      <div className="is-home section fh fh-lg home-hero text-dark d-flex align-items-center">
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-9 col-sm-12 order-md-0 order-1">

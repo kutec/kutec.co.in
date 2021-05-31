@@ -1,19 +1,22 @@
-import React from "react"
+import React from "react";
 import PostListing from "../PostListing/PostListing";
 
 const Articles = ({ postEdges, totalPosts }) => {
-  console.log('ku::: Articles', postEdges);
+  console.log("ku::: Articles", postEdges);
 
   return (
     <>
       <section className="section fh">
         <div className="container">
-          <h1 className="title">Articles <small>{totalPosts}</small></h1>
-          <PostListing postEdges={postEdges} showCategory={true} />
+          <h1 className="title">
+            Articles <small>{totalPosts}</small>
+          </h1>
+          <PostListing postEdges={postEdges} showCategory={true} showTags={true} />
+          {/* <PostListing postEdges={postEdges} showCategory={true} showTags={false} /> */}
         </div>
       </section>
     </>
   );
-}
+};
 
-export default Articles
+export default Articles;

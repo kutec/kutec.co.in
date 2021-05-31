@@ -16,7 +16,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function PostTemplate({ data, pageContext }) {
   console.log("222::: ", data, pageContext);
-  const { slug } = pageContext;
+  const { slug, nextslug, nexttitle, prevslug, prevtitle } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
   if (!post.id) {
@@ -31,7 +31,7 @@ export default function PostTemplate({ data, pageContext }) {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
 
-        <div data-ref="tmpl - post.jsx">
+        <div className="single-page" data-ref="tmpl - post.jsx">
           {/* <div className="container"> */}
           <div>
             <header className="section">
@@ -55,6 +55,19 @@ export default function PostTemplate({ data, pageContext }) {
             <div className="section bg-white">
               <div className="container am">
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              </div>
+            </div>
+
+            <div className="section">
+              <div className="container">
+                <div className="d-md-flex row">
+                  <div className="prev-post col-md-6 py-lg-3 py-2">
+                    <a href={"/blog" + prevslug}>{prevtitle}</a>
+                  </div>
+                  <div className="next-post col-md-6 text-right py-lg-3 py-2">
+                    <a href={"/blog" + nextslug}>{nexttitle}</a>
+                  </div>
+                </div>
               </div>
             </div>
             {/* <div className="post-meta">

@@ -12,9 +12,12 @@ const LatestPosts = ({ postEdges }) => {
         <h4>
           <span>Latest Posts</span>
         </h4>
-        <ul className="list-unstyled">
-          <PostListing postEdges={postEdges} showCategory={true} />
-        </ul>
+
+        <PostListing
+          postEdges={postEdges}
+          showCategory={true}
+          showTags={true}
+        />
 
         <p>
           Take me to the <Link to="blog">blog</Link> page.

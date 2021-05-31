@@ -39,7 +39,7 @@ const config = {
       iconClassName: "fa fa-envelope",
     },
   ],
-  copyright: "Copyright © 2021. Kushal J", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Developed and maintained by Kushal J", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   navigation: [
