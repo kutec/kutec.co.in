@@ -12,10 +12,13 @@ tags:
 
 NPX exists since the NPM version 5.2.
 
-Try to run below command:
+Try to run below command.
 ```
+npm i -g npm
+```
+You would notice below output.
 
 Stay tuned and happy coding :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkzNzMxOTQ2LDM2ODQ3OTk4OF19
+eyJoaXN0b3J5IjpbLTY4MTU2ODk0NywzNjg0Nzk5ODhdfQ==
 -->
