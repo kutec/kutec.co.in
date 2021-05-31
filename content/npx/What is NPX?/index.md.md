@@ -10,9 +10,12 @@ tags:
   - npm
 ---
 
-NPX exists since the npm version 5.2.
+NPX exists since the NPM version 5.2.
+
+Try to run below command:
+```
 
 Stay tuned and happy coding :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgzNjQ2NDQxLDM2ODQ3OTk4OF19
+eyJoaXN0b3J5IjpbMjkzNzMxOTQ2LDM2ODQ3OTk4OF19
 -->
