@@ -1,18 +1,13 @@
+import { graphql } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import PostCategories from "../components/PostCategories/PostCategories";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import Footer from "../components/Footer/Footer";
+import TimeAgo from 'react-timeago';
 import config from "../../data/SiteConfig";
-// import "./b16-tomorrow-dark.scss";
-// import "./post.scss";
-import Sidebar from "../components/Sidebar/Sidebar";
+import PostCategories from "../components/PostCategories/PostCategories";
+import PostTags from "../components/PostTags/PostTags";
+import SEO from "../components/SEO/SEO";
+import UserInfo from "../components/UserInfo/UserInfo";
+import Layout from "../layout";
 
 export default function PostTemplate({ data, pageContext }) {
   console.log("222::: ", data, pageContext);
@@ -43,11 +38,29 @@ export default function PostTemplate({ data, pageContext }) {
                   <div>
                     <h1>{post.title}</h1>
 
-                    {/* <UserInfo config={config} /> */}
+
                     <PostCategories category={post.category} />
                     <PostTags tags={post.tags} />
+
+                    <div className="mt-2 mt-md-3">
+                      <small className="mr-3 d-inline-block">
+                        <i className="fas fa-user mr-2"></i>
+                        <span className="mr-1">By</span>
+                        <span className="mt-2 d-inline-block">
+                          <UserInfo config={config} expanded={true} />
+                        </span>
+                      </small>
+
+                      <small className="d-inline-block">
+                        <i className="fas fa-clock mr-2"></i>
+                        <span>Posted <TimeAgo date={post.date} unit={'year', 'month', 'week'}  /></span>
+                      </small>
+
+
+                    </div>
                   </div>
                 </div>
+
               </div>
             </header>
 
