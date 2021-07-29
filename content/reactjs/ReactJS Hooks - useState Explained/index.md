@@ -11,7 +11,8 @@ tags:
   - react-usestate
 ---
 
-Once you have learned the basics of the ReactJS, the next thing is the Hooks. This Hooks available from the vers16.8
+Once you have learned the basics of the ReactJS, the next thing is the Hooks. This Hooks available from the version 16.8 of React.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MTI1OTI5NywtMTkyODk0ODQzMV19
+eyJoaXN0b3J5IjpbLTIxMzM3MjQwNzksLTE5Mjg5NDg0MzFdfQ
+==
 -->
