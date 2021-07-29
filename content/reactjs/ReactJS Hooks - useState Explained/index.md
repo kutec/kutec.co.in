@@ -12,7 +12,8 @@ tags:
 ---
 
 Once you have learned the basics of React, the next thing is the Hooks. Hooks are a new addition in React 16.8 and they are the most common set of snippets that you would use in any project.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMDQ5MzI0MSw1ODE3MjA2MjIsLTE5Mj
-g5NDg0MzFdfQ==
+eyJoaXN0b3J5IjpbMTgxMTcxODQzOSwxOTMwNDkzMjQxLDU4MT
+cyMDYyMiwtMTkyODk0ODQzMV19
 -->
