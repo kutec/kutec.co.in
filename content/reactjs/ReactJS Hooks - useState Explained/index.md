@@ -13,8 +13,8 @@ tags:
 
 Once you have learned the basics of React, the next thing is the Hooks. Hooks are a new addition in React 16.8 and they are the most common set of snippets that you would use in any project.
 
-**Hooks allow you to reuse stateful logic without changing your component hierarchy.** This makes it easy to share Hooks among many components or with the community --- [Reactjs.org](https://reactjs.org/)
+>_**Hooks allow you to reuse stateful logic without changing your component hierarchy.** This makes it easy to share Hooks among many components or with the community --- [Reactjs.org](https://reactjs.org/)_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjU2NjQ1MjYsMTkzMDQ5MzI0MSw1OD
-E3MjA2MjIsLTE5Mjg5NDg0MzFdfQ==
+eyJoaXN0b3J5IjpbNjk3ODU1NDkyLDE5MzA0OTMyNDEsNTgxNz
+IwNjIyLC0xOTI4OTQ4NDMxXX0=
 -->
