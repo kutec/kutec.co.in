@@ -1,17 +1,17 @@
 ---
-title: ReactJS Hooks - useState ExplainedReact App)
+title: ReactJS Hooks - useState Explained
 cover: ""
-date: "2018-07-17"
+date: "2018-08-10"
 category: reactjs
-slug: project-architecture-of-react
+slug: reactjs-hooks-usestate
 tags:
   - react-beginner
   - beginner
-  - react-architecture
-  - react-app-scaffolding
+  - react-hooks
+  - react-usestate
 ---
 
 Something is being coocked...
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNjA4NDE3OF19
+eyJoaXN0b3J5IjpbLTE5Mjg5NDg0MzFdfQ==
 -->
