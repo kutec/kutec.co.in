@@ -11,7 +11,7 @@ tags:
   - react-usestate
 ---
 
-Something is being coocked...
+Once you have learned the basics of the ReactJS, the next thing is the Hooks. This Hooks available from the vers16.8
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjg5NDg0MzFdfQ==
+eyJoaXN0b3J5IjpbMTM0MTI1OTI5NywtMTkyODk0ODQzMV19
 -->
