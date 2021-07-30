@@ -1,15 +1,15 @@
 ---
-title: Angular - Use '@' alias for Smarter Imports - Get Rid of Relative Paths
+title: Angular CLI - Get Rid of Relative Paths using '@' alias
 cover: ""
 date: "2017-01-01"
 category: angular
-slug: angular-render-array-without-for-loop
+slug: angular-cli-avoid-relative-paths
 tags:
-  - javascript-join
-  - angular-innerhtml
+  - angular-cli
+  - npm-
   - use-case
 lastmod: 2021-04-29T11:32:09.599Z
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMTg3NzEyMl19
+eyJoaXN0b3J5IjpbMTc1NTI4NjYzMl19
 -->
