@@ -5,7 +5,7 @@ const config = require("./data/SiteConfig");
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 
-module.exports = {
+const cfg = {
   pathPrefix: validatedPathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
@@ -212,3 +212,16 @@ module.exports = {
     },
   ],
 };
+
+if (process.env.CONTEXT !== "production") {
+  const draftsCfg = {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `drafts`,
+      path: `${__dirname}/drafts`
+    }
+  };
+  cfg.plugins.push(draftsCfg);
+}
+
+module.exports = cfg;
