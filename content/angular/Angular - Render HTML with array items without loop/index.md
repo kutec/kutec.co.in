@@ -11,7 +11,7 @@ tags:
 lastmod: 2021-04-29T11:32:09.599Z
 ---
 
-Design a data for your application isn't a tough task if you have to do it from scratch. But migration or conversion project, might have few limitations, in terms of modifying the data structure (or the response structure which is being server to the Angular application through REST service).
+Design a data for your application isn't a tough task if you have to do it from scratch. But migration or conversion project, might have few limitations, in terms of modifying the data structure (or the response structure which is being served to the Angular application through API service).
 
 I would like to share one of the use case, where the client didn't allow to modify the data response for particular section and we had to find a solution to render correct UI with the same.
 
@@ -21,7 +21,7 @@ Below response was coming from the backend service.
 
 ### JSON
 
-```json{1,4-6}
+```json
 {
 	"arrayKey": {
 		"<div class=\"some-class\">",
@@ -50,7 +50,7 @@ Below response was coming from the backend service.
 }
 ```
 
-If we try with above - suggested solution - then we would get the exact output as in the above image.
+If we try with above-suggested solution then we would get the exact output as in the above image.
 
 ### HTML
 
@@ -62,7 +62,7 @@ Below is the simple HTML rendering the UI.
 
 Now let's deal with the strings-array format to render the same UI. Below was the UI we were getting.
 
-We tried to achive that by adding a for-loop logic in TS file. But somehow deu to the `OL` tag, it was breaking the numbering sequence due to `DIV` placeholder.
+We tried to achive that by adding a for-loop logic in TS file. But somehow due to the `OL` tag, it was breaking the numbering sequence due to the `DIV` placeholder.
 
 ### Another HTML
 
@@ -85,3 +85,10 @@ Below is the simple HTML rendering the UI.
 ```html
 <div [innerHtml]="data?.arrayKey.join('')"></div>
 ```
+
+Hopefully, this soulution should be helpful if you are not deep into the JavaScript.
+
+<small>Do comment if you have other or similar solution for such scenario.
+
+Happy coding :)
+</small>
