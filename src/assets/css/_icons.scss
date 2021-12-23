@@ -54,6 +54,22 @@
             border-radius: 12rem;
         }
     }
+
+    &-html {
+        @include c-icon('\f13b', $html, #fff, 128px, 4rem, 2rem);
+
+        &:before {
+            border-radius: 12rem;
+        }
+    }
+
+    &-css {
+        @include c-icon('\f38b', $css, #fff, 128px, 4rem, 2rem);
+
+        &:before {
+            border-radius: 12rem;
+        }
+    }
 }
 
 .hi {
@@ -86,6 +102,28 @@
             background-color: $angularBg;
 
             .c-angular {
+                &::before {
+                    background-color: #fff;
+                    color: $angular;
+                }
+            }
+        }
+
+        &.html {
+            background-color: $angularBg;
+
+            .c-html {
+                &::before {
+                    background-color: #fff;
+                    color: $angular;
+                }
+            }
+        }
+
+        &.css {
+            background-color: $angularBg;
+
+            .c-css {
                 &::before {
                     background-color: #fff;
                     color: $angular;
