@@ -27,7 +27,7 @@ Next, I would like to present a list of the features that are popular among deve
 
 ## HTML5 – Good Things
 1. [The Doctype](#1-the-doctype)
-2. Semantic Tags
+2. [Semantic Elements](#2-semantic-elements)
 3. No Types Atttributes for Links and Scripts
 4. Data Attributes
 5. Form Attributes and Placeholder
@@ -54,6 +54,42 @@ It was a little tough to remember the doctype syntax for the earlier versions co
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 ```
+<small>&#8593; [Back to **HTML5 – Good Things**](#html5--good-things)</small>
 
+### 2. Semantic Elements
+In earlier versions of HTML, we had to use `div` everywhere. This sometimes becomes complex to read for a lengthy page. However, there is an option for a developer to put `id` or `class` attribute over a `div` element. At some point, this technic improves the readability but not fully.
+
+HTML5 has introduced many semantic elements. Semantic elements describe the clear meaning of element being used for. So as a developer scanning the code would become simpler. Now you would understand the purpose of a written code just by seeing at it and yes, can also avoid putting a descriptive comments for code-block defined with semantic tags.
+
+Below are a few of the popular semantic elements in HTML5:
+
+* main
+* section
+* article
+* aside
+* header
+* footer
+* nav
+
+#### Example usage of semantic elements
+```html
+<header>
+  <nav>
+    <!-- nav content -->
+  </nav>
+</header>
+
+<main>
+  <section>
+    <article>
+      <!-- content -->
+    </article>
+  </section>
+</main>
+
+<footer>
+  <!-- footer content -->
+</footer>
+```
 ###### **Deep reading**:
 * (W3C) <a href="//www.w3.org/TR/html5-diff/" target="_blank">HTML5 Differences from HTML4</a>
