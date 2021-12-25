@@ -28,11 +28,10 @@ Next, I would like to present a list of the features that are popular among deve
 ## HTML5 – Good Things
 1. [The Doctype](#1-the-doctype)
 2. [Semantic Elements](#2-semantic-elements)
-3. No Types Atttributes for Links and Scripts
-4. Data Attributes
-5. Form Attributes and Placeholder
-6. Storage APIs
-7. Output Element
+3. [Data Attributes](#3-data-attributes)
+4. Form Attributes and Placeholder
+5. Storage APIs
+6. Output Element
 
 ### 1. The Doctype
 It was a little tough to remember the doctype syntax for the earlier versions compared to the HTML5 simplified doctype. But, there was a support of auto-generated snippets available in most of the IDE of that time (i.e. Dreamweaver).
@@ -46,6 +45,7 @@ It was a little tough to remember the doctype syntax for the earlier versions co
 <br>
 <br>
 
+#### <small>1.1</small> Example
 ```html
 <!-- now - shorter -->
 <!DOCTYPE html>
@@ -55,6 +55,7 @@ It was a little tough to remember the doctype syntax for the earlier versions co
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 ```
 <small>&#8593; [Back to **HTML5 – Good Things**](#html5--good-things)</small>
+
 
 ### 2. Semantic Elements
 In earlier versions of HTML, we had to use `div` everywhere. This sometimes becomes complex to read for a lengthy page. However, there is an option for a developer to put `id` or `class` attribute over a `div` element. At some point, this technic improves the readability but not fully.
@@ -71,7 +72,7 @@ Below are a few of the popular semantic elements in HTML5:
 * footer
 * nav
 
-#### Example usage of semantic elements
+#### <small>2.1</small> Example usage of semantic elements
 ```html
 <header>
   <nav>
@@ -91,5 +92,41 @@ Below are a few of the popular semantic elements in HTML5:
   <!-- footer content -->
 </footer>
 ```
+<small>&#8593; [Back to **HTML5 – Good Things**](#html5--good-things)</small>
+
+
+### 3. Data Attributes
+Data attributes are special attributes that start with `data-`. This used to store page related data for a web page and the same can be manipulated later with the use of JavaScript. `data-` attribute is also use to add specific styling.
+
+The popular use of `data-` attribute can be creating a functional tooltip without JavaScript.
+
+###### **Thoughtful Reading**: 
+* (Internal) <a href="#" target="_blank">Understand HTML5 Data Attributes with In-depth Examples</a>
+
+#### <small>3.1</small> HTML syntax 
+```html
+<article data-id="1" data-category="html" data-type="post">
+  <!-- content -->
+</article>
+```
+
+#### <small>3.2</small> CSS use
+```css
+article[data-category='html']{
+  background-color: orange;
+  color: #fff;
+}
+```
+
+#### <small>3.3</small> Accessing through JavaScript
+```javascript
+// getting data-attribute value
+element.getAttribute("data-category");
+
+// setting data-attribute value
+element.setAttribute("data-category", "other-category");
+```
+<small>&#8593; [Back to **HTML5 – Good Things**](#html5--good-things)</small>
+
 ###### **Deep reading**:
 * (W3C) <a href="//www.w3.org/TR/html5-diff/" target="_blank">HTML5 Differences from HTML4</a>
