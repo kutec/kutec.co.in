@@ -53,6 +53,7 @@ body {
             .badge {
                 margin-top: 10px;
                 filter: $filterShadow opacity(70%);
+                min-width: 90px;
 
                 &:hover {
                     filter: $filterShadow grayscale(0) opacity(100%);
@@ -78,6 +79,29 @@ body {
                 content: attr(data-label);
                 z-index: 99999;
                 margin-left: 10px;
+            }
+
+            [data-label]:after{
+                opacity: 0;
+                margin-left: 0;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                font-size: medium;
+                transition: all .2s cubic-bezier(1, 0.97, 0, 1.31) 0.3s;
+            }
+            [data-label]:hover:after{
+                opacity: 1;
+                transition: all .2s cubic-bezier(1, 0.97, 0, 1.31) 0.3s;
+            }
+            [data-label] i:before{
+                opacity: 1;
+                transition: all .5s cubic-bezier(1, 0.97, 0, 1.31) 0.3s;
+            }
+            [data-label]:hover i:before{
+                opacity: 0;
+                transition: all .3s cubic-bezier(1, 0.97, 0, 1.31) 0.3s;
             }
         }
     }

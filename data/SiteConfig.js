@@ -105,6 +105,24 @@ const config = {
       iconClasses: "fab fa-html5 text-danger",
       badgeClasses: "badge btn disabled btn-light btn-lg"
     }
+  ],
+  skills: [
+    {
+      skill: 'Reactjs',
+      level: 'Biginner'
+    },
+    {
+      skill: 'Angular',
+      level: 'Expert'
+    },
+    {
+      skill: 'HTML',
+      level: 'Super Expert'
+    },
+    {
+      skill: 'CSS',
+      level: 'CSS Super Expert'
+    }
   ]
 };
 

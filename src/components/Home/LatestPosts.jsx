@@ -9,19 +9,37 @@ const LatestPosts = ({ postEdges }) => {
   return (
     <section className="section latest-posts">
       <div className="container">
-        <h4>
-          <span>Latest Posts</span>
-        </h4>
 
-        <PostListing
-          postEdges={postEdges}
-          showCategory={true}
-          showTags={true}
-        />
+        <div class="row">
+          <div className="col-lg-3">
+            <section className="twitter-follow">
+              <h4>Follow me on Twitter</h4>
+              <div className="my-4">
+                <a class="twitter-follow-button"
+                  href="https://twitter.com/kutec"
+                  data-size="large"></a>
+              </div>
+            </section>
+          </div>
 
-        <p>
-          Take me to the <Link to="blog">blog</Link> page.
-        </p>
+          <div class="col-lg-9">
+            <h4>
+              <span>Latest Posts</span>
+            </h4>
+
+            <PostListing
+              postEdges={postEdges}
+              showCategory={true}
+              showTags={true}
+            />
+
+            <p>
+              Take me to the <Link to="blog">blog</Link> page.
+            </p>
+          </div>
+        </div>
+
+
       </div>
     </section>
   );

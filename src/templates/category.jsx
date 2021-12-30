@@ -9,25 +9,47 @@ export default function CategoryTemplate({ pageContext, data }) {
   const { category } = pageContext;
   const postEdges = data.allMarkdownRemark.edges;
   const totalPosts = data.allMarkdownRemark.totalCount;
+  const categoryName = category.substring(0, 1).toUpperCase() + category.substring(1);
 
   return (
     <Layout>
       <div className="category-page">
         <Helmet
-          title={`Posts in category "${category}" | ${config.siteTitle}`}
+          title={`${categoryName} | ${config.siteTitle}`}
         />
         <section className={category + " section fh"}>
           <div className="container">
-            <h1 className="title">
-              <strong>{category.substring(0, 1).toUpperCase()}</strong>
-              {category.substring(1)}
-            </h1>
-            <p>
-              <strong>{totalPosts}</strong> article(s) found.
-            </p>
 
-            <PostListing postEdges={postEdges} showTags={true} />
+            <div className="row">
+              <div className="col-lg-8">
+                <h1 className="title">
+                  {categoryName}
+                </h1>
+                <p>
+                  <strong>{totalPosts}</strong> article(s) found.
+                </p>
+
+                <PostListing postEdges={postEdges} showTags={true} />
+              </div>
+
+              <div className="col-lg-4">
+                {
+                  config.skills.map((val) => (
+
+                    val.skill.toLowerCase() === categoryName.toLowerCase() ?
+
+                      <div className={`${val.skill.toLowerCase()}-${val.level.toLowerCase()}`}>
+                        {val.level}
+                      </div>
+
+                      : ''
+
+                  ))
+                }
+              </div>
+            </div>
           </div>
+
         </section>
       </div>
     </Layout>
