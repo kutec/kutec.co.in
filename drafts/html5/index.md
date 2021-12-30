@@ -29,7 +29,7 @@ Next, I would like to present a list of the features that are popular among deve
 1. [The Doctype](#1-the-doctype)
 2. [Semantic Elements](#2-semantic-elements)
 3. [Data Attributes](#3-data-attributes)
-4. Form Attributes and Placeholder
+4. [Form Improvements](#4-form-attributes)
 5. Storage APIs
 6. Output Element
 
@@ -128,5 +128,68 @@ element.setAttribute("data-category", "other-category");
 ```
 <small>&#8593; [Back to **HTML5 – Good Things**](#html5--good-things)</small>
 
+
+### 4. Form Improvements
+Forms are an integral part of any website or web application, which is used to take inputs from end-user.
+
+In HTML5, there are many useful attributes and iput-types are introduced. Below, I would like to mention a few that I used the most.
+
+* Placeholder
+* Required
+* Input Types, i.e.: number, range, date, color, etc.
+
+#### <small>4.1</small> Placeholder
+Earlier we had to pass some <em>value</em> or <em>the label text</em> with the `input` element to recognize the purpose of it. I know, we all have used that focus-blur  JavaScript to get the cool placeholder effect.
+
+But now the similar effect we can achieve without adding any JavaScript. HTML5 form has now an attribute called `placeholder` which renders soft text for `input`.
+
+<small>Note: The word **soft text** is how I remember the placeholder text effect which disappears on user focuses and comes back on the keypress event. Nothing to do with technical terminology.</small>
+
+<small>**Example:**</small>
+```html
+<input type="text" placeholder="placeholder text...">
+```
+<blockquote>
+
+<small>**Output:**</small>
+
+<input type="text" placeholder="placeholder text...">
+
+</blockquote>
+
+#### <small>4.2</small> Required
+`required` is another form attribute that tells the form that user-input for this particular input is required without which the form cannot be submitted. 
+
+This attribute can be applied to `select` and `textarea` as well.
+
+<small>**Example:**</small>
+
+```html
+<input type="text" required>
+
+```
+
+#### <small>4.3</small> Input Types
+Before few years, `type="text"` was the only available type for the input. Now, in HTML5, there are numbers of useful types like `number`, `range`, `date`, etc. are available which makes the data input easy and smooth.
+
+```
+<!-- number -->
+<input type="number">
+
+<!-- range -->
+<input type="range">
+
+<!-- date -->
+<input type="date">
+```
+
+*<small>Follow the [Deep Reading](#deep-reading) section to read more about Form Additions in HTML5.</small>*
+
+<small>&#8593; [Back to **HTML5 – Good Things**](#html5--good-things)</small>
+
+
 ###### **Deep reading**:
 * (W3C) <a href="//www.w3.org/TR/html5-diff/" target="_blank">HTML5 Differences from HTML4</a>
+* (W3C) <a href="////www.w3.org/wiki/HTML5_form_additions?source=post_page---------------------------" target="_blank">HTML5 form additions</a>
+
+
