@@ -23,7 +23,8 @@
         "lint:md": "remark content/",
         "write-good": "write-good $(glob 'content/posts/**/*.md')",
         "format:js": "prettier '**/*.{js,jsx}' --write",
-        "format:styles": "prettier '**/*.{css,scss}' --write"
+        "format:styles": "prettier '**/*.{css,scss}' --write",
+        "clean1": "gatsby clean"
     },
     "dependencies": {
         "@deckdeckgo/highlight-code": "^2.6.0",
@@ -87,11 +88,10 @@
         "eslint-plugin-react-hooks": "^4.3.0",
         "gatsby-plugin-sass": "^4.14.0",
         "gh-pages": "^3.2.3",
-        "node-sass": "^4.14.1",
         "prettier": "^2.5.1",
         "remark-cli": "^9.0.0",
         "remark-preset-lint-recommended": "^5.0.0",
-        "sass": "^1.45.1",
+        "sass": "^1.80.7",
         "stylelint": "^13.13.1",
         "stylelint-config-prettier": "^8.0.2",
         "stylelint-config-standard": "^20.0.0",
