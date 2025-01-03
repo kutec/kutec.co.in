@@ -33,6 +33,7 @@ const Home = ({ postEdges }) => {
                 <img
                   className="rounded-circle img-fluid user-avtar"
                   src={userAvatar}
+                  alt=""
                 />
               </figure>
               {/* </Col> */}
