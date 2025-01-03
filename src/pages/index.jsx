@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { graphql } from "gatsby";
 import Layout from "../layout";
 import Home from "../components/Home/Home";
 import config from "../../data/SiteConfig";
-import { graphql } from "gatsby";
 
 function HomePage({ data }) {
   console.log('HomePage: ', data);
