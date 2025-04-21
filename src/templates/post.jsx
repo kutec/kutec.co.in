@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 import TimeAgo from 'react-timeago';
-import DOMPurify from "dompurify";
 import config from "../../data/SiteConfig";
 import PostCategories from "../components/PostCategories/PostCategories";
 import PostTags from "../components/PostTags/PostTags";
@@ -68,7 +67,7 @@ export default function PostTemplate({ data, pageContext }) {
             {/* eslint-disable-next-line react/no-danger */}
             <div className="section bg-white">
               <div className="container">
-                <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postNode.html) }} />
+                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
               </div>
             </div>
 
