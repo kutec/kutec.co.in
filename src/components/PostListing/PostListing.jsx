@@ -31,9 +31,9 @@ function PostListing({ postEdges, showCategory, showTags }) {
             key={post.path}
           >
             <div className="media-body">
-              <h5 className="m-0" key={post.title}>
+              <h5 className="m-0">
                 {/* <strong className="mt-0" key={post.title}> */}
-                <Link to={`/${post.category}${post.path.startsWith('/') ? post.path : `/${  post.path}`}`}>
+                <Link to={`/${post.category}${post.path.startsWith('/') ? post.path : `/${post.path}`}`}>
                   {post.title}
                 </Link>
                 {/* </strong> */}

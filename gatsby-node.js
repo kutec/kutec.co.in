@@ -141,7 +141,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const nextEdge = postsEdges[nextID];
     const prevEdge = postsEdges[prevID];
 
-    const blogPostPath = `${edge.node.frontmatter.category + edge.node.fields.slug}`
+    const normalizedSlug = edge.node.fields.slug.startsWith('/') 
+      ? edge.node.fields.slug.slice(1) 
+      : edge.node.fields.slug;
+    const blogPostPath = `${edge.node.frontmatter.category}/${normalizedSlug}`;
 
     createPage({
       path: blogPostPath,

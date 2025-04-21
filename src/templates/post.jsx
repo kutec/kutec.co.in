@@ -2,6 +2,7 @@ import { graphql } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 import TimeAgo from 'react-timeago';
+import DOMPurify from "dompurify";
 import config from "../../data/SiteConfig";
 import PostCategories from "../components/PostCategories/PostCategories";
 import PostTags from "../components/PostTags/PostTags";
@@ -33,7 +34,7 @@ export default function PostTemplate({ data, pageContext }) {
               <div className="container">
                 <div className="d-flex">
                   <span
-                    className={"c-" + post.category + " ci-128 d-inline-block"}
+                    className={`c-${post.category} ci-128 d-inline-block`}
                   />
                   <div>
                     <h1>{post.title}</h1>
@@ -44,16 +45,16 @@ export default function PostTemplate({ data, pageContext }) {
 
                     <div className="mt-2 mt-md-3">
                       <small className="mr-3 d-inline-block">
-                        <i className="fas fa-user mr-2"></i>
+                        <i className="fas fa-user mr-2" />
                         <span className="mr-1">By</span>
                         <span className="mt-2 d-inline-block">
-                          <UserInfo config={config} expanded={true} />
+                          <UserInfo config={config} expanded />
                         </span>
                       </small>
 
                       <small className="d-inline-block">
-                        <i className="fas fa-clock mr-2"></i>
-                        <span>Posted <TimeAgo date={post.date} unit={'year', 'month', 'week'}  /></span>
+                        <i className="fas fa-clock mr-2" />
+                        <span>Posted <TimeAgo date={post.date} unit={['year', 'month', 'week']}  /></span>
                       </small>
 
 
@@ -66,8 +67,8 @@ export default function PostTemplate({ data, pageContext }) {
 
             {/* eslint-disable-next-line react/no-danger */}
             <div className="section bg-white">
-              <div className="container am">
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <div className="container">
+                <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postNode.html) }} />
               </div>
             </div>
 
@@ -75,10 +76,10 @@ export default function PostTemplate({ data, pageContext }) {
               <div className="container">
                 <div className="d-md-flex row">
                   <div className="prev-post col-md-6 py-lg-3 py-2">
-                    <a href={"/blog" + prevslug}>{prevtitle}</a>
+                    <a href={`/blog${  prevslug}`}>{prevtitle}</a>
                   </div>
                   <div className="next-post col-md-6 text-right py-lg-3 py-2">
-                    <a href={"/blog" + nextslug}>{nexttitle}</a>
+                    <a href={`/blog${  nextslug}`}>{nexttitle}</a>
                   </div>
                 </div>
               </div>
@@ -102,9 +103,9 @@ export default function PostTemplate({ data, pageContext }) {
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      # html
-      # timeToRead
-      # excerpt
+      html
+      timeToRead
+      excerpt
       frontmatter {
         title
         cover

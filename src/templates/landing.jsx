@@ -2,18 +2,26 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
 function Landing({ data }) {
-  const postEdges = data.allMarkdownRemark.edges;
+  const posts = data.allMarkdownRemark.edges;
+
   return (
     <Layout>
       <div className="landing-container" data-ref="landing.jsx">
         <div className="posts-container-1">
           <Helmet title={config.siteTitle} />
           <SEO />
+          <ul>
+            {posts.map(({ node }) => (
+              <li key={node.fields.slug}>
+                <h2>{node.frontmatter.title}</h2>
+                <p>{node.excerpt}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </Layout>
