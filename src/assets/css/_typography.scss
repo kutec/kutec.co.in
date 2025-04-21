@@ -1,3 +1,6 @@
+@use './variables' as vars;
+@use './lib' as lib;
+
 h1,
 h2,
 h3,
@@ -11,59 +14,59 @@ h6 {
 
 a:not(.btn):not(.navbar-brand) {
     text-decoration: none;
-    color: $link;
+    color: vars.$link;
 
     &:hover {
         text-decoration: none;
-        text-shadow: $textShadow;
+        text-shadow: vars.$textShadow;
     }
 }
 
 .is-home {
     .badge {
-        text-shadow: $textShadow;
+        text-shadow: vars.$textShadow;
 
         &:hover {
-            text-shadow: $textShadowDark;
+            text-shadow: vars.$textShadowDark;
         }
     }
 }
 
 h1 {
-    @include font-size(2rem);
+    @include lib.font-size(2rem);
     font-weight: 900;
 }
 
 h2 {
-    @include font-size(1.4rem);
+    @include lib.font-size(1.4rem);
     font-weight: 900;
     // font-size: calc(2vw + 1.4vh + .4vmin);
 }
 
 h3 {
-    @include font-size(1.25rem);
+    @include lib.font-size(1.25rem);
     font-weight: 900;
 }
 
 h4 {
-    @include font-size(1.15rem);
+    @include lib.font-size(1.15rem);
     font-weight: 900;
 }
 
 p {
-    @include font-size(1.12rem);
+    @include lib.font-size(1.12rem);
 }
 
 .display-4 {
-    @include font-size(3.5rem);
+    @include lib.font-size(3.5rem);
 }
 
 .gatsby-highlight {
-    @include font-size(1rem);
+    @include lib.font-size(1rem);
 }
 
 blockquote {
-    @include font-size(1.17rem);
+    @include lib.font-size(1.17rem);
     line-height: 2.2rem;
     background-color: rgb(255 255 255 / 43%);
     border-left: 5px solid rgb(221 221 221);

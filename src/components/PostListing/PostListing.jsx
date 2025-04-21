@@ -5,7 +5,6 @@ import PostTags from "../PostTags/PostTags";
 
 function PostListing({ postEdges, showCategory, showTags }) {
   const postList = [];
-  let newPath;
   postEdges.forEach((postEdge) => {
     postList.push({
       path: postEdge.node.fields.slug,
@@ -28,13 +27,13 @@ function PostListing({ postEdges, showCategory, showTags }) {
         /* Your post list here. */
         postList.map((post) => (
           <li
-            className={"c-" + post.category + " media my-4"}
-            key={Math.random()}
+            className={`c-${post.category} media my-4`}
+            key={post.path}
           >
             <div className="media-body">
               <h5 className="m-0" key={post.title}>
                 {/* <strong className="mt-0" key={post.title}> */}
-                <Link to={'/'+post.category + post.path}>
+                <Link to={`/${post.category}${post.path.startsWith('/') ? post.path : `/${  post.path}`}`}>
                   {post.title}
                 </Link>
                 {/* </strong> */}

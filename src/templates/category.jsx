@@ -17,7 +17,7 @@ export default function CategoryTemplate({ pageContext, data }) {
         <Helmet
           title={`${categoryName} | ${config.siteTitle}`}
         />
-        <section className={category + " section fh"}>
+        <section className={`${category} section fh`}>
           <div className="container">
 
             <div className="row">
@@ -29,21 +29,17 @@ export default function CategoryTemplate({ pageContext, data }) {
                   <strong>{totalPosts}</strong> article(s) found.
                 </p>
 
-                <PostListing postEdges={postEdges} showTags={true} />
+                <PostListing postEdges={postEdges} showTags />
               </div>
 
               <div className="col-lg-4">
                 {
                   config.skills.map((val) => (
-
                     val.skill.toLowerCase() === categoryName.toLowerCase() ?
-
-                      <div className={`${val.skill.toLowerCase()}-${val.level.toLowerCase()}`}>
+                      <div key={val.skill} className={`${val.skill.toLowerCase()}-${val.level.toLowerCase()}`}>
                         {val.level}
                       </div>
-
                       : ''
-
                   ))
                 }
               </div>

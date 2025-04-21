@@ -1,3 +1,5 @@
+@use './variables' as vars;
+
 @mixin c-icon($unicode, $bg: #aaa, $fg: #fff, $size: 64px, $fSize: 2rem, $mr: 1rem) {
     &:before {
         content: $unicode;
@@ -39,7 +41,7 @@
 
 .c {
     &-reactjs {
-        @include c-icon('\f41b', $react, #fff, 128px, 4rem, 2rem);
+        @include c-icon('\f41b', vars.$react, #fff, 128px, 4rem, 2rem);
 
         &:before {
             border-radius: 12rem;
@@ -48,7 +50,7 @@
     }
 
     &-angular {
-        @include c-icon('\f420', $angular, #fff, 128px, 4rem, 2rem);
+        @include c-icon('\f420', vars.$angular, #fff, 128px, 4rem, 2rem);
 
         &:before {
             border-radius: 12rem;
@@ -56,7 +58,7 @@
     }
 
     &-html {
-        @include c-icon('\f13b', $html, #fff, 128px, 4rem, 2rem);
+        @include c-icon('\f13b', vars.$html, #fff, 128px, 4rem, 2rem);
 
         &:before {
             border-radius: 12rem;
@@ -64,7 +66,7 @@
     }
 
     &-css {
-        @include c-icon('\f38b', $css, #fff, 128px, 4rem, 2rem);
+        @include c-icon('\f38b', vars.$css, #fff, 128px, 4rem, 2rem);
 
         &:before {
             border-radius: 12rem;
@@ -74,13 +76,13 @@
 
 .hi {
     &-react {
-        color: $react;
-        background-color: $react;
+        color: vars.$react;
+        background-color: vars.$react;
         border: 0;
     }
 
     &-angular {
-        background-color: $angular;
+        background-color: vars.$angular;
         border: 0;
     }
 }
@@ -88,45 +90,45 @@
 .category-page {
     .section:nth-child(1) {
         &.reactjs {
-            background-color: $reactBg;
+            background-color: vars.$reactBg;
 
             .c-reactjs {
                 &::before {
                     background-color: #fff;
-                    color: $react;
+                    color: vars.$react;
                 }
             }
         }
 
         &.angular {
-            background-color: $angularBg;
+            background-color: vars.$angularBg;
 
             .c-angular {
                 &::before {
                     background-color: #fff;
-                    color: $angular;
+                    color: vars.$angular;
                 }
             }
         }
 
         &.html {
-            background-color: $angularBg;
+            background-color: vars.$angularBg;
 
             .c-html {
                 &::before {
                     background-color: #fff;
-                    color: $angular;
+                    color: vars.$angular;
                 }
             }
         }
 
         &.css {
-            background-color: $angularBg;
+            background-color: vars.$angularBg;
 
             .c-css {
                 &::before {
                     background-color: #fff;
-                    color: $angular;
+                    color: vars.$angular;
                 }
             }
         }

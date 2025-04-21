@@ -65,9 +65,9 @@ const cfg = {
               },
             },
           },
-          {
-            resolve: `gatsby-remark-relative-images`,
-          },
+          // {
+          //   resolve: `gatsby-remark-relative-images`,
+          // },
           {
             resolve: "gatsby-remark-images",
             options: {
