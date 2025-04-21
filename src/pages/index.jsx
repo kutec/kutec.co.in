@@ -8,6 +8,7 @@ import config from "../../data/SiteConfig";
 function HomePage({ data }) {
   console.log('HomePage: ', data);
   const postEdges = data.allMarkdownRemark.edges;
+  console.log('postEdges::: ', postEdges);
 
   return (
     <Layout>
@@ -31,8 +32,6 @@ export const query = graphql`
             slug
             date
           }
-          excerpt
-          timeToRead
           frontmatter {
             title
             category

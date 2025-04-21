@@ -1,9 +1,9 @@
-@import './lib';
-@import './variables';
-@import './rwd';
-@import './typography';
-@import './code-highlight';
-@import './icons';
+@use './lib';
+@use './variables' as vars;
+@use './rwd';
+@use './typography';
+@use './code-highlight';
+@use './icons';
 
 /* = */
 *,
@@ -48,19 +48,19 @@ body {
 
     &.is-home {
         .home-icons {
-            filter: $filterShadow;
+            filter: vars.$filterShadow;
 
             .badge {
                 margin-top: 10px;
-                filter: $filterShadow opacity(70%);
+                filter: vars.$filterShadow opacity(70%);
                 min-width: 90px;
 
                 &:hover {
-                    filter: $filterShadow grayscale(0) opacity(100%);
+                    filter: vars.$filterShadow grayscale(0) opacity(100%);
                 }
 
                 &.disabled {
-                    filter: $filterShadow grayscale(1) opacity(30%);
+                    filter: vars.$filterShadow grayscale(1) opacity(30%);
 
                 }
             }
@@ -155,10 +155,10 @@ body {
 }
 
 .user-avtar {
-    filter: $filterShadow grayscale(1);
+    filter: vars.$filterShadow grayscale(1);
 
     &:hover {
-        filter: $filterShadowHover grayscale(0);
+        filter: vars.$filterShadowHover grayscale(0);
     }
 }
 

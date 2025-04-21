@@ -50,6 +50,7 @@
         "gatsby-plugin-sharp": "^2.14.4",
         "gatsby-plugin-sitemap": "^2.6.0",
         "gatsby-plugin-twitter": "^2.4.0",
+        "gatsby-recipes": "1.4.0",
         "gatsby-remark-autolink-headers": "^2.5.0",
         "gatsby-remark-copy-linked-files": "^2.4.0",
         "gatsby-remark-highlight-code": "^2.2.1",
@@ -73,7 +74,7 @@
         "react-share": "^4.3.1",
         "react-timeago": "^6.2.1",
         "react-twitter-widgets": "^1.10.0",
-        "rfs": "^9.0.6",
+        "rfs": "10.0.0",
         "url-join": "^4.0.0"
     },
     "devDependencies": {
@@ -86,7 +87,7 @@
         "eslint-plugin-prettier": "^3.4.1",
         "eslint-plugin-react": "^7.27.1",
         "eslint-plugin-react-hooks": "^4.3.0",
-        "gatsby-plugin-sass": "^4.14.0",
+    "gatsby-plugin-sass": "2.3.0",
         "gh-pages": "^3.2.3",
         "prettier": "^2.5.1",
         "remark-cli": "^9.0.0",
