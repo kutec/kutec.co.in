@@ -155,6 +155,8 @@ exports.createPages = async ({ graphql, actions }) => {
         nextslug: nextEdge.node.fields.slug,
         prevtitle: prevEdge.node.frontmatter.title,
         prevslug: prevEdge.node.fields.slug,
+        prevcategory: prevEdge.node.frontmatter.category,
+        nextcategory: nextEdge.node.frontmatter.category,
       },
     });
   });

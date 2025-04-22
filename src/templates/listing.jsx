@@ -53,30 +53,30 @@ function Listing({ pageContext, data }) {
 export default Listing;
 
 /* eslint no-undef: "off" */
-export const listingQuery = graphql`
-  query ListingQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: [fields___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            category
-            tags
-            cover
-            date
-          }
-        }
-      }
-    }
-  }
-`;
+// export const listingQuery = graphql`
+//   query ListingQuery($skip: Int!, $limit: Int!) {
+//     allMarkdownRemark(
+//       sort: { fields: [fields___date], order: DESC }
+//       limit: $limit
+//       skip: $skip
+//     ) {
+//       edges {
+//         node {
+//           fields {
+//             slug
+//             date
+//           }
+//           excerpt
+//           timeToRead
+//           frontmatter {
+//             title
+//             category
+//             tags
+//             cover
+//             date
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

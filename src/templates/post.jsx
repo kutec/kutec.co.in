@@ -11,7 +11,7 @@ import Layout from "../layout";
 
 export default function PostTemplate({ data, pageContext }) {
   console.log("222::: ", data, pageContext);
-  const { slug, nextslug, nexttitle, prevslug, prevtitle } = pageContext;
+  const { slug, nextslug, nexttitle, prevslug, prevtitle, prevcategory, nextcategory } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
   if (!post.id) {
@@ -32,9 +32,6 @@ export default function PostTemplate({ data, pageContext }) {
             <header className="section">
               <div className="container">
                 <div className="d-flex">
-                  <span
-                    className={`c-${post.category} ci-128 d-inline-block`}
-                  />
                   <div>
                     <h1>{post.title}</h1>
 
@@ -53,12 +50,15 @@ export default function PostTemplate({ data, pageContext }) {
 
                       <small className="d-inline-block">
                         <i className="fas fa-clock mr-2" />
-                        <span>Posted <TimeAgo date={post.date} unit={['year', 'month', 'week']}  /></span>
+                        <span>Posted <TimeAgo date={post.date} unit={['year', 'month', 'week']} /></span>
                       </small>
 
 
                     </div>
                   </div>
+                  <span
+                    className={`c-${post.category} ci-128 ml-auto d-none d-md-block`}
+                  />
                 </div>
 
               </div>
@@ -67,30 +67,43 @@ export default function PostTemplate({ data, pageContext }) {
             {/* eslint-disable-next-line react/no-danger */}
             <div className="section bg-white">
               <div className="container">
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              </div>
-            </div>
-
-            <div className="section">
-              <div className="container">
-                <div className="d-md-flex row">
-                  <div className="prev-post col-md-6 py-lg-3 py-2">
-                    <a href={`/blog${  prevslug}`}>{prevtitle}</a>
+                <div className="row">
+                  <div className="col-md-9">
+                    <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
                   </div>
-                  <div className="next-post col-md-6 text-right py-lg-3 py-2">
-                    <a href={`/blog${  nextslug}`}>{nexttitle}</a>
+
+                  <div className="col-md-3">
+                    <div className="aside-bar">
+                      <h4>Categories</h4>
+                      <PostCategories category={post.category} />
+                      <h4 className="mt-5">Tags</h4>
+                      <PostTags tags={post.tags} />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* <div className="post-meta">
+
+              <div className="section">
+                <div className="container">
+                  <div className="d-md-flex row">
+                    <div className="prev-post col-md-6 py-lg-3 py-2">
+                      <a href={`/${prevcategory}${prevslug}`}>{prevtitle}</a>
+                    </div>
+                    <div className="next-post col-md-6 text-right py-lg-3 py-2">
+                      <a href={`/${nextcategory}${nextslug}`}>{nexttitle}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
             </div> */}
 
-            {/* <Disqus postNode={postNode} /> */}
-            {/* <Footer config={config} /> */}
-            {/* </div> */}
+              {/* <Disqus postNode={postNode} /> */}
+              {/* <Footer config={config} /> */}
+              {/* </div> */}
+            </div>
           </div>
         </div>
       </div>
