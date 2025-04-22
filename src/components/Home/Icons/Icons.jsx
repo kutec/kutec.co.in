@@ -15,8 +15,10 @@ function Icons() {
             key={icon.id}
             href={icon.url}
             data-label={icon.label}
+            aria-label={icon.label}
           >
-            <i className={icon.iconClasses}></i>
+            <i className={icon.iconClasses} />
+            <span className="sr-only">{icon.label}</span>
           </a>
         ))}
       </div>

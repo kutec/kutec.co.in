@@ -1,31 +1,32 @@
 const config = {
-  siteTitle: "Kushal J", // Site title.
-  siteTitleShort: "KU", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "Kushal J - A Frontend Developer's Log", // Alternative site title for SEO.
+  siteTitle: "Kushal Jayswal", // Site title.
+  siteTitleShort: "Kushal", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: "Kushal Jayswal - A Frontend Developer's Log", // Alternative site title for SEO.
   siteLogo: "https://en.gravatar.com/userimage/11516795/a2b65eab1a444284c8c88a3f97838eb9.jpg?size=64", // Logo used for SEO and manifest.
   siteUrl: "https://kutec.netlify.com/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "An online space to log everything I learn in my day-to-day work and personal life.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "Kushal J - A Frontend Developer's Log", // Title of the RSS feed
+  siteRssTitle: "Kushal Jayswal - A Frontend Developer's Log", // Title of the RSS feed
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   disqusShortname: "kushjays", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD-MM-YYYY", // Date format for display.
-  postsPerPage: 2, // Amount of posts displayed per listing page.
-  userName: "Kushal J", // Username to display in the author segment.
+  postsPerPage: 5, // Amount of posts displayed per listing page.
+  userName: "Kushal Jayswal", // Username to display in the author segment.
   userEmail: "ku@kutec.co.in", // Email used for RSS feed's author segment
-  userTwitter: "kutec", // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "India", // User location to display in the author segment.
-  userAvatar: "https://en.gravatar.com/userimage/11516795/234b5038fc3af6813d55351eeafa78ac.jpg?size=400", // User avatar to display in the author segment.
+  // userAvatar: "https://en.gravatar.com/userimage/11516795/234b5038fc3af6813d55351eeafa78ac.jpg?size=400", // User avatar to display in the author segment.
+  userAvatar: "https://media.licdn.com/dms/image/v2/D4D03AQF3vo17SmhrZw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676042082763?e=1750896000&v=beta&t=z9wmVhLefEQZZWEvfH2-GEbH3qYNFFf34VCuWCx0GRg", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-advanced-starter",
+      url: "https://github.com/kutec",
       iconClassName: "fa fa-github",
     },
     {
@@ -39,7 +40,7 @@ const config = {
       iconClassName: "fa fa-envelope",
     },
   ],
-  copyright: "Developed and maintained by Kushal J", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Developed and maintained by Kushal Jayswal", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   navigation: [

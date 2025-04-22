@@ -6,7 +6,7 @@ import { userAvatar } from "../../../data/SiteConfig";
 const Home = ({ postEdges }) => {
   return (
     <>
-      <div className="is-home section fh fh-lg home-hero text-dark d-flex align-items-center">
+      <div className="is-home section home-hero text-dark d-flex align-items-center">
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-9 col-sm-12 order-md-0 order-1">
@@ -21,7 +21,7 @@ const Home = ({ postEdges }) => {
 
               <p className="mt-4">
                 Above icons are my main skillsets. You can click on them and see
-                what I've learned so far in the particular topic.{" "}
+                what I&apos;ve learned so far in the particular topic.{" "}
                 <a href="/about">Click here</a> to know more <i>about me</i>.
               </p>
             </div>

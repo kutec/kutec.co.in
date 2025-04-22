@@ -11,17 +11,10 @@ function SiteFooter({ config }) {
           <small>
             <small>
               &copy;&nbsp;
-              <a href="mailto:ku@kutec.co.in?subject='Kushal J - Site'">
-                <strong>Kushal J</strong>
+              <a href="mailto:ku@kutec.co.in?subject='Kushal J - Blog Site'">
+                <strong>Kushal Jayswal</strong>
               </a>
-              . Based on{" "}
-              <a
-                href="https://github.com/Vagr9K/gatsby-advanced-starter"
-                target="_blank"
-              >
-                Advanced Starter
-              </a>
-              .
+              &nbsp;{new Date().getFullYear()}.
             </small>
           </small>
         </p>
