@@ -11,19 +11,13 @@ const Home = ({ postEdges }) => {
           <div className="row d-flex align-items-center">
             <div className="col-md-9 col-sm-12 order-md-0 order-1">
               <h1 className="title has-text-weight-bold">
-                <small>Namaste, I am</small> Kushal J.
+                <small>Hi, I am</small> Kushal Jayswal.
               </h1>
               <h2 className="subtitle">
                 <small>A</small> frontend developer <small>from India.</small>
               </h2>
 
               <Icons />
-
-              <p className="mt-4">
-                Above icons are my main skillsets. You can click on them and see
-                what I&apos;ve learned so far in the particular topic.{" "}
-                <a href="/about">Click here</a> to know more <i>about me</i>.
-              </p>
             </div>
 
             <div className="col-md-3 col-5 order-0 order-md-1 mx-auto">

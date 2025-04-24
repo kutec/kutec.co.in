@@ -61,3 +61,6 @@ bundle-stats.json
 # macOS
 .DS_Store
 _.git
+
+node_modules
+.env

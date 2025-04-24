@@ -6,14 +6,16 @@ import config from "../../data/SiteConfig";
 import PostCategories from "../components/PostCategories/PostCategories";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
-import UserInfo from "../components/UserInfo/UserInfo";
 import Layout from "../layout";
+import Comments from "../components/Comments/Comments";
+
 
 export default function PostTemplate({ data, pageContext }) {
   console.log("222::: ", data, pageContext);
   const { slug, nextslug, nexttitle, prevslug, prevtitle, prevcategory, nextcategory } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
+
   if (!post.id) {
     post.id = slug;
   }
@@ -32,7 +34,10 @@ export default function PostTemplate({ data, pageContext }) {
             <header className="section">
               <div className="container">
                 <div className="d-flex">
-                  <div>
+                  <span
+                    className={`c-${post.category} ci-128 d-none d-md-block`}
+                  />
+                  <div className="text-left">
                     <h1>{post.title}</h1>
 
 
@@ -42,23 +47,15 @@ export default function PostTemplate({ data, pageContext }) {
                     <div className="mt-2 mt-md-3">
                       <small className="mr-3 d-inline-block">
                         <i className="fas fa-user mr-2" />
-                        <span className="mr-1">By</span>
-                        <span className="mt-2 d-inline-block">
-                          <UserInfo config={config} expanded />
-                        </span>
+                        <span className="mr-1">{post.author ? post.author : 'Kushal'}</span>
                       </small>
 
                       <small className="d-inline-block">
                         <i className="fas fa-clock mr-2" />
                         <span>Posted <TimeAgo date={post.date} unit={['year', 'month', 'week']} /></span>
                       </small>
-
-
                     </div>
                   </div>
-                  <span
-                    className={`c-${post.category} ci-128 ml-auto d-none d-md-block`}
-                  />
                 </div>
 
               </div>
@@ -85,14 +82,20 @@ export default function PostTemplate({ data, pageContext }) {
 
               <div className="section">
                 <div className="container">
-                  <div className="d-md-flex row">
-                    <div className="prev-post col-md-6 py-lg-3 py-2">
-                      <a href={`/${prevcategory}${prevslug}`}>{prevtitle}</a>
+                  <div className="d-md-flex justify-content-between align-items-center mb-5">
+
+                    <div className="prev-post py-lg-3 py-2">
+                      <a className={`c-${prevcategory} d-table-cell align-top pr-3`} href={`/categories/${prevcategory}`}>{prevcategory.toUpperCase()}</a>
+                      <a className="d-table-cell w-100 align-top" href={`/${prevcategory}${prevslug}`}>{prevtitle}</a>
                     </div>
-                    <div className="next-post col-md-6 text-right py-lg-3 py-2">
-                      <a href={`/${nextcategory}${nextslug}`}>{nexttitle}</a>
+                    <div className="next-post text-right py-lg-3 py-2">
+                      <a className="d-table-cell w-100 align-top" href={`/${nextcategory}${nextslug}`}>{nexttitle}</a>
+                      <a className={`c-${nextcategory} d-table-cell align-top pl-3`} href={`/categories/${nextcategory}`}>{nextcategory.toUpperCase()}</a>
                     </div>
                   </div>
+
+                  <Comments postNode={postNode} />
+
                 </div>
               </div>
               {/* <div className="post-meta">
@@ -100,7 +103,6 @@ export default function PostTemplate({ data, pageContext }) {
               <SocialLinks postPath={slug} postNode={postNode} />
             </div> */}
 
-              {/* <Disqus postNode={postNode} /> */}
               {/* <Footer config={config} /> */}
               {/* </div> */}
             </div>
@@ -120,6 +122,7 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        author
         cover
         date
         category

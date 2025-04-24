@@ -12,12 +12,23 @@ const LatestPosts = ({ postEdges }) => {
 
         <div className="row">
           <div className="col-lg-3">
-            <section className="twitter-follow">
-              <h4>Follow me on Twitter</h4>
-              <div className="my-4">
-                <a className="twitter-follow-button"
+            <section className="linkedin-follow">
+              {/* <h4>Follow me on LinkedIn</h4> */}
+              <div className="mb-4">
+                
+                {/* <a className="twitter-follow-button"
                   href="https://twitter.com/kutec"
-                  data-size="large"></a>
+                  data-size="large">
+                  Follow @kutec on Twitter
+                </a> */}
+
+
+
+                
+                <a className="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=kushal-jayswal" target="_blank" rel="noreferrer">Follow on LinkedIn</a>
+
+
+
               </div>
             </section>
           </div>

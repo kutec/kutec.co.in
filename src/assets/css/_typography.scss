@@ -12,7 +12,7 @@ h6 {
     }
 }
 
-a:not(.btn):not(.navbar-brand) {
+a:not(.btn):not(.navbar-brand):not(.libutton) {
     text-decoration: none;
     color: vars.$link;
 

@@ -8,7 +8,7 @@ module.exports = {
   siteRss: '/rss.xml',
   siteFBAppID: '', // FB Application ID for using app insights
   googleTagManagerID: '', // GTM tracking ID.
-  disqusShortname: '', // Disqus shortname.
+  disqusShortname: 'kushaljayswal', // Disqus shortname.
   userName: '',
   userTwitter: '',
   userLocation: 'Ahmedabad, Gujarat, India',

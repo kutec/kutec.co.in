@@ -23,6 +23,12 @@ const cfg = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `kushaljayswal`
+      }
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {
@@ -44,6 +50,20 @@ const cfg = {
       options: {
         name: "posts",
         path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "ReactJS Posts",
+        path: `${__dirname}/content/reactjs`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "Angular Posts",
+        path: `${__dirname}/content/angular`,
       },
     },
     {
