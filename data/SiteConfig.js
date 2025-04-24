@@ -3,7 +3,7 @@ const config = {
   siteTitleShort: "Kushal", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Kushal Jayswal - A Frontend Developer's Log", // Alternative site title for SEO.
   siteLogo: "https://en.gravatar.com/userimage/11516795/a2b65eab1a444284c8c88a3f97838eb9.jpg?size=64", // Logo used for SEO and manifest.
-  siteUrl: "https://kutec.netlify.com/", // Domain of your website without pathPrefix.
+  siteUrl: "https://kutec.co.in/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "An online space to log everything I learn in my day-to-day work and personal life.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.

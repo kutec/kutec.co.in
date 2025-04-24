@@ -8,7 +8,7 @@ function Comments({ postNode }) {
     return null;
   }
   const post = postNode.frontmatter;
-  const url = urljoin(config.siteUrl, config.pathPrefix, postNode.fields.slug);
+  const url = urljoin(config.siteUrl, post.category, postNode.fields.slug);
   return (
     <div className="disqus-container" data-ref="Disqus.jsx">
       <div className="disqus-header">
