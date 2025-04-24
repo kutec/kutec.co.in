@@ -7,7 +7,8 @@ import PostCategories from "../components/PostCategories/PostCategories";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
 import Layout from "../layout";
-import Disqus from "../components/Disqus/Disqus";
+import Comments from "../components/Comments/Comments";
+
 
 export default function PostTemplate({ data, pageContext }) {
   console.log("222::: ", data, pageContext);
@@ -93,7 +94,7 @@ export default function PostTemplate({ data, pageContext }) {
                     </div>
                   </div>
 
-                  <Disqus postNode={postNode} />
+                  <Comments postNode={postNode} />
 
                 </div>
               </div>
