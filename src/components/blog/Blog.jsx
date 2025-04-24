@@ -11,7 +11,7 @@ const Articles = ({ postEdges, totalPosts }) => {
           <h1 className="title">
             Articles <small>{totalPosts}</small>
           </h1>
-          <PostListing postEdges={postEdges} showCategory={true} showTags={true} />
+          <PostListing postEdges={postEdges} showCategory showTags />
           {/* <PostListing postEdges={postEdges} showCategory={true} showTags={false} /> */}
         </div>
       </section>

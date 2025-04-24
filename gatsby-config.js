@@ -47,6 +47,20 @@ const cfg = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "ReactJS Posts",
+        path: `${__dirname}/content/reactjs`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "Angular Posts",
+        path: `${__dirname}/content/angular`,
+      },
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [

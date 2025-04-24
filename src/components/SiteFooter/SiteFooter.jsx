@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
 
-function SiteFooter({ config }) {
+function SiteFooter() {
   // const url = config.siteRss;
 
   return (
-    <footer className="py-3 bg-light" data-ref="sitefooter.jsx">
+    <footer className="py-3" data-ref="sitefooter.jsx">
       <div className="container text-monospace">
         <p className="m-0">
           <small>
@@ -18,10 +17,6 @@ function SiteFooter({ config }) {
             </small>
           </small>
         </p>
-
-        {/* <Link to={url}>
-          <button type="button">Subscribe</button>
-        </Link> */}
       </div>
     </footer>
   );

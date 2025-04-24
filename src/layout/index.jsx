@@ -13,13 +13,13 @@ export default function MainLayout({ children }) {
   deckDeckGoHighlightElement();
 
   return (
-    <div data-ref="MainLayout - index.jsx">
+    <div data-ref="MainLayout - index.jsx" className="d-flex flex-column min-vh-100">
       <Helmet>
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
       </Helmet>
       <Header config={config} />
-      <div>{children}</div>
+      <main className="flex-grow-1">{children}</main>
       <SiteFooter />
     </div>
   );

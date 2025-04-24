@@ -1,5 +1,6 @@
 ---
 title: Angular - Render an array items without a for loop
+author: Test Author
 cover: ""
 date: "2021-04-20"
 category: angular

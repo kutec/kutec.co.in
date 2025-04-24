@@ -10,12 +10,12 @@ function Header({ config }) {
   }
   return (
     <header className="header">
-      <div className="container">
-        <nav className="navbar navbar-light navbar-expand-lg">
+      <nav className="navbar fixed-top navbar-light navbar-expand-lg">
+        <div className="container">
           <a className="navbar-brand" href="/">
-            <figure className="image d-inline-block align-middle mb-0">
+            {/* <figure className="image d-inline-block align-middle mb-0">
               <img height="64px" className="img-fluid" src={logo} alt={title || "Site logo"} />
-            </figure>
+            </figure> */}
             <strong> {title}</strong>
           </a>
 
@@ -36,8 +36,8 @@ function Header({ config }) {
               <Navigation config={config} labeled />
             </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 }
