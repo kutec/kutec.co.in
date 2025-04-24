@@ -19,7 +19,7 @@ A [Gatsby v2](https://www.gatsbyjs.org/) and [Netlify CMS](https://www.netlifycm
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
 ## Demo
-[Kushal Jayswal](https://kutec.netlify.com)
+[Kushal Jayswal](https://kutec.co.in)
 
 ## Features
 * Complete Business Website Suite - Home Page, About Page, Pricing Page, Contact Page and Blog
@@ -84,7 +84,7 @@ module.exports = {
   siteTitle: 'Kushal Jayswal', // Site title.
   siteTitleAlt: 'Business', // Alternative site title for SEO.
   siteLogo: '/icons/icon-512x512.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://kutec.netlify.com', // Domain of your website without pathPrefix.
+  siteUrl: 'https://kutec..co.in', // Domain of your website without pathPrefix.
   // Do not use trailing slash!
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/kutec.co.in /.
   siteDescription: 'Leverage Gatsby Business Starter for your Business.', // Website description used for RSS feeds/meta description tag.
