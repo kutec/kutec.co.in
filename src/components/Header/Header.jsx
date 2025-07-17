@@ -4,12 +4,6 @@ import Navigation from '../Navigation/Navigation'
 import Search from '../Search/Search'
 
 function Header ({ config }) {
-  const title = config.siteTitle
-  const { copyright } = config
-  if (!copyright) {
-    return null
-  }
-
   // Query all posts for search
   const data = useStaticQuery(graphql`
     {
@@ -22,11 +16,18 @@ function Header ({ config }) {
           fields {
             slug
           }
+          excerpt
+          rawMarkdownBody
         }
       }
     }
   `)
-  console.log('Header - data', data)
+
+  const title = config.siteTitle
+  const { copyright } = config
+  if (!copyright) {
+    return null
+  }
 
   return (
     <header className='header'>

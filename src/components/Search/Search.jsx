@@ -1,13 +1,26 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Link } from 'gatsby'
+import PostListing from '../PostListing/PostListing'
 
 function Search ({ posts }) {
   const [query, setQuery] = useState('')
   const [focused, setFocused] = useState(false)
   const inputRef = useRef(null)
-  const filteredPosts = posts.filter(post =>
-    post.frontmatter.title.toLowerCase().includes(query.toLowerCase())
-  )
+
+  // Filter by title, excerpt, or full content (rawMarkdownBody)
+  const filteredPosts =
+    query.length >= 3
+      ? posts
+          .filter(post => {
+            const title = post.frontmatter.title?.toLowerCase() || ''
+            const excerpt = post.excerpt?.toLowerCase() || ''
+            const content = post.rawMarkdownBody?.toLowerCase() || ''
+            const q = query.toLowerCase()
+            return (
+              title.includes(q) || excerpt.includes(q) || content.includes(q)
+            )
+          })
+          .map(post => ({ node: post })) // <-- always wrap!
+      : []
 
   // Handler to close overlay when clicking outside
   const handleOverlayClick = e => {
@@ -53,66 +66,66 @@ function Search ({ posts }) {
             style={{
               width: '100%',
               maxWidth: 500,
-              margin: '40px auto 0 auto', // top margin only
+              margin: '40px auto 0 auto',
               position: 'relative'
             }}
           >
-            <input
-              ref={inputRef}
-              type='text'
-              placeholder='Search blog posts...'
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              className='form-control form-control-lg'
-              style={{
-                fontSize: '1.25rem',
-                padding: '0.75rem 1.25rem',
-                borderRadius: '2rem',
-                boxShadow: query ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
-                border: '1px solid #ced4da',
-                transition: 'box-shadow 0.2s',
-                width: '100%'
-              }}
-            />
-            {query && (
-              <ul
-                className='list-group mt-2'
+            <div style={{ position: 'relative' }}>
+              <input
+                ref={inputRef}
+                type='text'
+                placeholder='Search blog posts...'
+                value={query}
+                onChange={e => setQuery(e.target.value)}
+                className='form-control form-control-lg'
                 style={{
-                  width: '100%',
-                  boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
-                  borderRadius: '1rem',
-                  background: '#fff',
-                  overflow: 'hidden'
+                  fontSize: '1.25rem',
+                  padding: '0.75rem 2.5rem 0.75rem 1.25rem',
+                  borderRadius: '2rem',
+                  boxShadow: query ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
+                  border: '1px solid #ced4da',
+                  transition: 'box-shadow 0.2s',
+                  width: '100%'
                 }}
-              >
-                {filteredPosts.map(post => (
-                  <li
-                    key={post.fields.slug}
-                    className='list-group-item'
-                    style={{ border: 'none', padding: '0.75rem 1.25rem' }}
-                  >
-                    <Link
-                      to={`/${post.frontmatter.category}${post.fields.slug}`}
-                      style={{
-                        textDecoration: 'none',
-                        color: '#007bff',
-                        fontWeight: 500
-                      }}
-                      onClick={() => setFocused(false)}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                  </li>
-                ))}
+              />
+              {query && (
+                <button
+                  type='button'
+                  aria-label='Clear search'
+                  onClick={() => setQuery('')}
+                  style={{
+                    position: 'absolute',
+                    right: '1rem',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'transparent',
+                    border: 'none',
+                    fontSize: '1.5rem',
+                    color: '#888',
+                    cursor: 'pointer'
+                  }}
+                >
+                  &#10005;
+                </button>
+              )}
+            </div>
+            {query.length > 0 && query.length < 3 && (
+              <div style={{ color: '#888', padding: '0.75rem 1.25rem' }}>
+                Please enter at least 3 characters to search.
+              </div>
+            )}
+            {query.length >= 3 && (
+              <div style={{ width: '100%', marginTop: '1rem' }}>
+                <PostListing postEdges={filteredPosts} />
                 {filteredPosts.length === 0 && (
-                  <li
-                    className='list-group-item text-muted'
-                    style={{ border: 'none', padding: '0.75rem 1.25rem' }}
+                  <div
+                    className='text-muted'
+                    style={{ padding: '0.75rem 1.25rem' }}
                   >
                     No results found.
-                  </li>
+                  </div>
                 )}
-              </ul>
+              </div>
             )}
           </div>
         </div>
@@ -121,21 +134,76 @@ function Search ({ posts }) {
         className='search-bar my-3'
         style={{ position: 'relative', maxWidth: 500, margin: '0 auto' }}
       >
-        <input
-          ref={inputRef}
-          type='text'
-          placeholder='Search blog posts...'
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          className='form-control form-control-lg'
-          style={{
-            fontSize: '1.25rem',
-            boxShadow: query ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
-            border: '1px solid #ced4da',
-            transition: 'box-shadow 0.2s'
-          }}
-          onFocus={() => setFocused(true)}
-        />
+        <div style={{ position: 'relative' }}>
+          <input
+            ref={inputRef}
+            type='text'
+            placeholder='Search blog posts...'
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            className='form-control form-control-lg'
+            style={{
+              fontSize: '1.25rem',
+              boxShadow: query ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
+              border: '1px solid #ced4da',
+              transition: 'box-shadow 0.2s',
+              padding: '0.75rem 2.5rem 0.75rem 1.25rem'
+            }}
+            onFocus={() => setFocused(true)}
+          />
+          {query && (
+            <button
+              type='button'
+              aria-label='Clear search'
+              onClick={() => setQuery('')}
+              style={{
+                position: 'absolute',
+                right: '1rem',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'transparent',
+                border: 'none',
+                fontSize: '1.5rem',
+                color: '#888',
+                cursor: 'pointer'
+              }}
+            >
+              &#10005;
+            </button>
+          )}
+        </div>
+        {query.length > 0 && query.length < 3 && (
+          <div style={{ color: '#888', padding: '0.75rem 1.25rem' }}>
+            Please enter at least 3 characters to search.
+          </div>
+        )}
+        {query.length >= 3 && (
+          <div
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              top: '100%',
+              zIndex: 101,
+              boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
+              borderRadius: '1rem',
+              background: '#fff',
+              overflow: 'hidden',
+              width: '100%',
+              padding: '1rem'
+            }}
+          >
+            <PostListing postEdges={filteredPosts} />
+            {filteredPosts.length === 0 && (
+              <div
+                className='text-muted'
+                style={{ padding: '0.75rem 1.25rem' }}
+              >
+                No results found.
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </>
   )
