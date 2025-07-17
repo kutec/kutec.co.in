@@ -8,8 +8,9 @@ function PostCategories({ category }) {
     <>
       <Link key={category} to={`/categories/${_.kebabCase(category)}`}>
         <small className="badge badge-pill bg-warning text-light mr-3">
-          {category.substring(0, 1).toUpperCase()}
-          {category.substring(1)}
+          {/* {category.substring(0, 1).toUpperCase()} */}
+          {/* {category.substring(1)} */}
+          {category}
         </small>
       </Link>
     </>

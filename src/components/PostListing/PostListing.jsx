@@ -16,9 +16,6 @@ function PostListing({ postEdges, showCategory, showTags }) {
       excerpt: postEdge.node.excerpt,
       timeToRead: postEdge.node.timeToRead,
     });
-
-    
-    
   });
 
   return (
