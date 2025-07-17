@@ -1,14 +1,17 @@
 import React from "react";
-import { Disqus } from 'gatsby-plugin-disqus';
+import { DiscussionEmbed } from "disqus-react";
 import urljoin from "url-join";
 import config from "../../../data/SiteConfig";
 
 function Comments({ postNode }) {
-  if (!config.disqusShortname) {
-    return null;
-  }
-  const post = postNode.frontmatter;
-  const url = urljoin(config.siteUrl, post.category, postNode.fields.slug);
+  if (!config.disqusShortname || !postNode) return null;
+
+  const post = postNode.frontmatter || {};
+  const slug = (postNode.fields && postNode.fields.slug) ? postNode.fields.slug : "";
+  const category = post.category || "uncategorized";
+  const url = urljoin(config.siteUrl, category, slug);
+  const title = post.title || "Untitled";
+
   return (
     <div className="disqus-container" data-ref="Disqus.jsx">
       <div className="disqus-header">
@@ -16,13 +19,16 @@ function Comments({ postNode }) {
       </div>
       <div className="disqus-body">
         <p>Leave a comment below:</p>
-        <Disqus
+        <DiscussionEmbed
+          shortname="kushjays"
           config={{
             url,
-            identifier: post.title,
-            title: post.title,
+            slug,
+            title,
           }}
         />
+
+
       </div>
     </div>
   );

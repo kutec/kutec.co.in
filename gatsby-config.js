@@ -23,12 +23,6 @@ const cfg = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `kushaljayswal`
-      }
-    },
-    {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {
