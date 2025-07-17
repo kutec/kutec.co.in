@@ -1,37 +1,36 @@
-import React from "react";
-import { DiscussionEmbed } from "disqus-react";
-import urljoin from "url-join";
-import config from "../../../data/SiteConfig";
+import React from 'react'
+import { DiscussionEmbed } from 'disqus-react'
+import urljoin from 'url-join'
+import config from '../../../data/SiteConfig'
 
-function Comments({ postNode }) {
-  if (!config.disqusShortname || !postNode) return null;
+function Comments ({ postNode }) {
+  if (!config.disqusShortname || !postNode) return null
 
-  const post = postNode.frontmatter || {};
-  const slug = (postNode.fields && postNode.fields.slug) ? postNode.fields.slug : "";
-  const category = post.category || "uncategorized";
-  const url = urljoin(config.siteUrl, category, slug);
-  const title = post.title || "Untitled";
+  const post = postNode.frontmatter || {}
+  const slug =
+    postNode.fields && postNode.fields.slug ? postNode.fields.slug : ''
+  const category = post.category || 'uncategorized'
+  const url = urljoin(config.siteUrl, category, slug)
+  const title = post.title || 'Untitled'
 
   return (
-    <div className="disqus-container" data-ref="Disqus.jsx">
-      <div className="disqus-header">
+    <div className='disqus-container' data-ref='Disqus.jsx'>
+      <div className='disqus-header'>
         <h3>Comments</h3>
       </div>
-      <div className="disqus-body">
+      <div className='disqus-body'>
         <p>Leave a comment below:</p>
         <DiscussionEmbed
-          shortname="kushjays"
+          shortname='kushaljayswal'
           config={{
             url,
             slug,
-            title,
+            title
           }}
         />
-
-
       </div>
     </div>
-  );
+  )
 }
 
-export default Comments;
+export default Comments
