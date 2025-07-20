@@ -16,20 +16,22 @@ export default function CategoriesPage ({ data }) {
 
   return (
     <Layout>
-      <div className='categories-list-container'>
-        <h1>All Categories</h1>
-        <ul>
-          {categories.map(category => (
-            <li key={category}>
-              <Link to={`/categories/${category}`}>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </Link>
-              <span style={{ marginLeft: '8px', color: '#888' }}>
-                ({categoryCounts[category]})
-              </span>
-            </li>
-          ))}
-        </ul>
+      <div className='categories-list-container section'>
+        <div className='container'>
+          <h1>All Categories</h1>
+          <ul>
+            {categories.map(category => (
+              <li key={category}>
+                <Link to={`/categories/${category}`}>
+                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                </Link>
+                <span style={{ marginLeft: '8px', color: '#888' }}>
+                  ({categoryCounts[category]})
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Layout>
   )

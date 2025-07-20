@@ -1,8 +1,8 @@
 .gatsby-highlight {
-    background-color: rgb(0 0 0 / 75%);
-    border-radius: 0.3em;
-    padding: 0;
-    margin: 1rem 0 2rem;
+    background-color: rgb(0, 0, 0);
+    margin: 3rem auto;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
     overflow: auto;
     box-shadow: 0px 0px 15px rgb(0 0 0 / 55%);
 
@@ -63,7 +63,7 @@
         margin: 0;
     }
 
-    .line-numbers .line-numbers-rows{
+    .line-numbers .line-numbers-rows {
         top: 1rem;
         left: 1rem !important;
     }
@@ -71,23 +71,23 @@
 }
 
 /* Prompt for all users */
-.command-line-prompt > span:before {
+.command-line-prompt>span:before {
     color: #999;
     content: " ";
     display: block;
     padding-right: 0.8em;
-  }
-  
-  /* Prompt for all users */
-  .command-line-prompt > span[data-user]:before {
+}
+
+/* Prompt for all users */
+.command-line-prompt>span[data-user]:before {
     content: "[" attr(data-user) "@" attr(data-host) "] $";
-  }
-  
-  /* Prompt for root */
-  .command-line-prompt > span[data-user="root"]:before {
+}
+
+/* Prompt for root */
+.command-line-prompt>span[data-user="root"]:before {
     content: "[" attr(data-user) "@" attr(data-host) "] #";
-  }
-  
-  .command-line-prompt > span[data-prompt]:before {
+}
+
+.command-line-prompt>span[data-prompt]:before {
     content: attr(data-prompt);
-  }
+}

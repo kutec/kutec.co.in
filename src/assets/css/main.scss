@@ -1,9 +1,11 @@
+// @use './tailwind-output' as tw;
 @use './lib';
 @use './variables' as vars;
 @use './rwd';
 @use './typography';
 @use './code-highlight';
 @use './icons';
+@use './single-page';
 
 /* = */
 *,
@@ -20,7 +22,7 @@ body {
     background-color: #fff;
     // font-family: 'Roboto Slab', serif;
     line-height: 1.7rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .libutton {
@@ -67,6 +69,8 @@ body {
     &.is-home {
         .home-icons {
             filter: vars.$filterShadow;
+            display: flex;
+            justify-content: space-between;
 
             .badge {
                 margin-top: 10px;
@@ -85,6 +89,11 @@ body {
 
             [data-label] {
                 position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                height: 100px;
+                align-items: center;
             }
 
             [data-label]:hover:after {
@@ -106,7 +115,7 @@ body {
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                font-size: medium;
+                font-size: 1.5rem;
                 transition: all .2s cubic-bezier(1, 0.97, 0, 1.31) 0.3s;
             }
 
@@ -187,11 +196,24 @@ body {
 }
 
 .header {
-    // min-height: 90px;
+
+    // min-height: 95px;
 
     .navbar {
         background: rgb(255 255 255 / 90%);
+
         // box-shadow: 0 3px 2px -2px rgb(0 0 0 / 10%);
+        .navbar-brand {
+            // font-weight: 700;
+            font-size: 1.7rem;
+
+            // color: #000;
+            &::after {
+                content: 'Front-End or nothing.';
+                display: block;
+                font-size: 1rem;
+            }
+        }
     }
 
     .img-fluid {
@@ -216,6 +238,31 @@ body {
     }
 }
 
+.gatsby-resp-image-wrapper {
+    margin: 3rem auto;
+
+    // .gatsby-resp-image-background-image,
+    // img {
+    //     border-radius: 1rem;
+    //     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    //     transition: all 0.3s ease-in-out;
+    //     width: 100%;
+    // }
+}
+
+img {
+
+    p & {
+        text-align: center;
+        max-width: 690px;
+        width: 100%;
+        display: block;
+        margin: 3rem auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+}
 
 /* utility */
 img.is-rounded {
