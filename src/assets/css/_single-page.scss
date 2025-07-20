@@ -1,0 +1,32 @@
+.single-page {
+    body & {
+        // background-color: red;
+        // margin-top: 16px;
+    }
+
+    p:first-of-type {
+        font-size: 1.50rem;
+        line-height: 2.5rem;
+    }
+
+    p+p {
+        margin-top: 1.25rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &:not(:first-child) {
+            margin-top: 3.5rem;
+        }
+
+        // margin-top: 3rem;
+    }
+
+    *+*:first-child {
+        margin-top: 0;
+    }
+}

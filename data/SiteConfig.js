@@ -69,14 +69,14 @@ const config = {
       label: "React",
       url: "categories/reactjs",
       iconClasses: "fab fa-react",
-      badgeClasses: "badge badge-pill btn text-white btn-lg mr-2 hi-react"
+      badgeClasses: "badge btn text-white btn-lg mr-2 hi-react"
     },
     {
       id: 2,
       label: "Angular",
       url: "categories/angular",
       iconClasses: "fab fa-angular",
-      badgeClasses: "badge badge-pill btn text-white btn-lg mr-2 hi-angular"
+      badgeClasses: "badge btn text-white btn-lg mr-2 hi-angular"
     },
     {
       id: 3,
@@ -104,7 +104,7 @@ const config = {
       label: "HTML",
       url: "categories/html",
       iconClasses: "fab fa-html5 text-danger",
-      badgeClasses: "badge btn disabled btn-light btn-lg"
+      badgeClasses: "badge btn btn-light btn-lg"
     }
   ],
   skills: [

@@ -1,12 +1,17 @@
 @use './variables' as vars;
 @use './lib' as lib;
 
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    +p {
+        margin-bottom: 1.5rem;
+    }
+
     .am & {
         margin: 3rem 0 1rem;
     }
@@ -55,6 +60,7 @@ h4 {
 
 p {
     @include lib.font-size(1.12rem);
+    line-height: 1.8rem;
 }
 
 .display-4 {

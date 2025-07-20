@@ -66,7 +66,7 @@ function Search ({ posts }) {
             style={{
               width: '100%',
               maxWidth: 500,
-              margin: '40px auto 0 auto',
+              margin: '24px auto 0 auto',
               position: 'relative'
             }}
           >
@@ -77,7 +77,7 @@ function Search ({ posts }) {
                 placeholder='Search blog posts...'
                 value={query}
                 onChange={e => setQuery(e.target.value)}
-                className='form-control form-control-lg'
+                className='form-control form-control-sm'
                 style={{
                   fontSize: '1.25rem',
                   padding: '0.75rem 2.5rem 0.75rem 1.25rem',
@@ -141,9 +141,9 @@ function Search ({ posts }) {
             placeholder='Search blog posts...'
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className='form-control form-control-lg'
+            className='form-control form-control-sm'
             style={{
-              fontSize: '1.25rem',
+              //   fontSize: '1.25rem',
               boxShadow: query ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
               border: '1px solid #ced4da',
               transition: 'box-shadow 0.2s',
