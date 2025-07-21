@@ -30,8 +30,8 @@ function Header ({ config }) {
   }
 
   return (
-    <header className='header'>
-      <nav className='navbar fixed-top navbar-light navbar-expand-lg'>
+    <header className='header sticky-top shadow-lg bg-body-tertiary rounded'>
+      <nav className='navbar navbar-light navbar-expand-lg'>
         <div className='container'>
           <a className='navbar-brand' href='/'>
             {/* <figure className="image d-inline-block align-middle mb-0">

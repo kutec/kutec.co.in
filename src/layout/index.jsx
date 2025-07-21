@@ -13,10 +13,7 @@ export default function MainLayout ({ children }) {
   deckDeckGoHighlightElement()
 
   return (
-    <div
-      data-ref='MainLayout - index.jsx'
-      className='d-flex flex-column min-vh-100'
-    >
+    <div data-ref='MainLayout - index.jsx' className='d-flex flex-column'>
       <Helmet>
         <meta name='description' content={config.siteDescription} />
         <html lang='en' />

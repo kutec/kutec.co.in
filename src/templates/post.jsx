@@ -31,7 +31,7 @@ export default function PostTemplate({ data, pageContext }) {
         <div className="single-page" data-ref="tmpl - post.jsx">
           {/* <div className="container"> */}
           <div>
-            <header className="section">
+            <header className="section pb-0">
               <div className="container">
                 <div className="d-flex">
                   <span
