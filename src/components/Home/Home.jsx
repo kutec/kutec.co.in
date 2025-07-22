@@ -7,8 +7,8 @@ const Home = ({ postEdges }) => {
   return (
     <>
       <div className="is-home section home-hero text-dark">
-    <Icons />
-        {/* <div className="container"> */}
+        <div className="container">
+          <Icons />
           {/* <div className="row d-flex align-items-center"> */}
             {/* <div className="col-md-9 col-sm-12 order-md-0 order-1"> */}
               {/* <h1 className="title has-text-weight-bold">
@@ -33,7 +33,7 @@ const Home = ({ postEdges }) => {
               {/* </Col> */}
             {/* </div> */}
           {/* </div> */}
-        {/* </div> */}
+        </div>
       </div>
 
       <LatestPosts postEdges={postEdges} />

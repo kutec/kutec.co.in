@@ -65,16 +65,16 @@ function Search ({ posts }) {
           <div
             style={{
               width: '100%',
-              maxWidth: 500,
-              margin: '24px auto 0 auto',
+              maxWidth: '70%',
+              margin: '16px auto 0 auto',
               position: 'relative'
             }}
           >
             <div style={{ position: 'relative' }}>
               <input
                 ref={inputRef}
-                type='text'
-                placeholder='Search blog posts...'
+                type='serch'
+                placeholder='React, JavaScript, CSS...'
                 value={query}
                 onChange={e => setQuery(e.target.value)}
                 className='form-control form-control-sm'
@@ -132,12 +132,12 @@ function Search ({ posts }) {
       )}
       <div
         className='search-bar my-3'
-        style={{ position: 'relative', maxWidth: 500, margin: '0 auto' }}
+        style={{ position: 'relative', margin: '0 auto' }}
       >
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative' }} className='container'>
           <input
             ref={inputRef}
-            type='text'
+            type='search'
             placeholder='Search blog posts...'
             value={query}
             onChange={e => setQuery(e.target.value)}
